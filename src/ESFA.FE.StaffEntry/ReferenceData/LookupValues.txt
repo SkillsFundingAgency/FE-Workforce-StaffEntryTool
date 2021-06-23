@@ -1,0 +1,195 @@
+﻿CurrentIndustryExperience	1	Yes
+CurrentIndustryExperience	2	No
+CurrentIndustryExperience	3	Not known 
+CurrentPositionDuration	1	Less than one year
+CurrentPositionDuration	2	1 to 3 years
+CurrentPositionDuration	3	4 to 10 years
+CurrentPositionDuration	4	11 to 20 years
+CurrentPositionDuration	5	Over 20 years
+Disability	1	Yes
+Disability	2	No
+Disability	3	Prefer not to say
+Ethnicity	31	English, Welsh, Scottish, Northern Irish or British
+Ethnicity	32	Irish
+Ethnicity	33	Gypsy or Irish Traveller
+Ethnicity	34	Any Other White background
+Ethnicity	35	White and Black Caribbean
+Ethnicity	36	White and Black African
+Ethnicity	37	White and Asian
+Ethnicity	38	Any Other Mixed or Multiple background
+Ethnicity	39	Indian
+Ethnicity	40	Pakistani
+Ethnicity	41	Bangladeshi
+Ethnicity	42	Chinese
+Ethnicity	43	Any other Asian background
+Ethnicity	44	African background
+Ethnicity	45	Caribbean
+Ethnicity	46	Any other Black, Black British or Caribbean background
+Ethnicity	47	Arab
+Ethnicity	48	Roma
+Ethnicity	98	Any other ethnic group
+Ethnicity	99	Prefer not to say
+FurtherEducationDuration	1	Less than one year
+FurtherEducationDuration	2	1 to 3 years
+FurtherEducationDuration	3	4 to 10 years
+FurtherEducationDuration	4	11 to 20 years
+FurtherEducationDuration	5	Over 20 years
+FurtherEducationDuration	6	Not known 
+Gender	1	Male
+Gender	2	Female
+Gender	3	Identifies in another way
+Gender	4	Prefer not to say
+HighestQualificationEnglish	2	Level 2 GCSE grade A* to C or equivalent
+HighestQualificationEnglish	3	Level 3 A Level or equivalent
+HighestQualificationEnglish	4	Level 4 Certificate of higher education
+HighestQualificationEnglish	5	Level 5 Foundation degree
+HighestQualificationEnglish	6	Level 6 Undergraduate degree or equivalent
+HighestQualificationEnglish	7	Level 7 Postgraduate degree or equivalent
+HighestQualificationEnglish	8	Level 8 Doctorates, award, certificate diploma in strategic direction
+HighestQualificationEnglish	10	Other
+HighestQualificationEnglish	11	None
+HighestQualificationEnglish	12	Not known 
+HighestQualificationMaths	2	Level 2 GCSE grade A* to C or equivalent
+HighestQualificationMaths	3	Level 3 A Level or equivalent
+HighestQualificationMaths	4	Level 4 Certificate of higher education
+HighestQualificationMaths	5	Level 5 Foundation degree
+HighestQualificationMaths	6	Level 6 Undergraduate degree or equivalent
+HighestQualificationMaths	7	Level 7 Postgraduate degree or equivalent
+HighestQualificationMaths	8	Level 8 Doctorates, award, certificate diploma in strategic direction
+HighestQualificationMaths	10	Other
+HighestQualificationMaths	11	None
+HighestQualificationMaths	12	Not known 
+HighestQualificationTaught	1	Level 1
+HighestQualificationTaught	2	Level 2 GCSEs/functional skills
+HighestQualificationTaught	3	Level 3 A Levels/OCR nationals
+HighestQualificationTaught	4	Level 4 Certificate of Higher Education, BTEC professional diplomas
+HighestQualificationTaught	5	Level 5 Foundation degree, HNC/HND
+HighestQualificationTaught	6	Level 6 Bachelors degree, BTEC professional diplomas
+HighestQualificationTaught	7	Level 7 Masters degree, NVQ Level 5
+HighestQualificationTaught	8	Level 8 Doctorates, award, certificate diploma in strategic direction
+HighestQualificationTaught	9	Entry level
+HighestQualificationTaught	10	Other
+HighestTeachingQualification	3	Level 3 Award in Education and Training, Level 3 Award in Preparing to Teach in the Lifelong Learning Sector (PTLLS)
+HighestTeachingQualification	4	Level 4 in Education and Training, Level 4 Certificate in Teaching in the Lifelong Learning Sector
+HighestTeachingQualification	5	Level 5  in Diploma in Education and Training, Level 5 Diploma in Teaching in the Lifelong Learning Sector (DTLLS), Level 5 Cert Ed
+HighestTeachingQualification	6	Level 6 Bachelors in Education (BEd), Professional certificate in education (PGCE)
+HighestTeachingQualification	7	Level 7 Postgraduate Certificate in Education (PGCE)
+HighestTeachingQualification	8	Level 8 Doctor of Education (EdD)
+HighestTeachingQualification	10	Other
+HighestTeachingQualification	11	None
+HighestTeachingQualification	12	Not known 
+HighestTeachingQualification	13	Working towards a teacher training qualification
+IndustryExperienceDuration	1	Less than one year
+IndustryExperienceDuration	2	1 to 3 years
+IndustryExperienceDuration	3	4 to 10 years
+IndustryExperienceDuration	4	11 to 20 years
+IndustryExperienceDuration	5	Over 20 years
+IndustryExperienceDuration	6	They haven't had prior industry experience
+IndustryExperienceDuration	7	Not known 
+ContractType	1	Permanent
+ContractType	2	Fixed term
+ContractType	3	Variable hours
+ContractType	4	Zero hours
+ContractType	5	Other
+MainSubjectTaught	1	Ancient Languages
+MainSubjectTaught	2	Archaeology
+MainSubjectTaught	3	Astronomy
+MainSubjectTaught	4	Art and Design, History of Art
+MainSubjectTaught	5	Biology
+MainSubjectTaught	6	Chemistry
+MainSubjectTaught	7	Citizenship studies
+MainSubjectTaught	8	Classical studies
+MainSubjectTaught	9	Computer science
+MainSubjectTaught	10	Dance, drama and theatre
+MainSubjectTaught	11	Design, technology and engineering
+MainSubjectTaught	12	Electronics
+MainSubjectTaught	13	English
+MainSubjectTaught	14	Environmental science
+MainSubjectTaught	15	Film and media studies
+MainSubjectTaught	16	Food preparation and nutrition
+MainSubjectTaught	17	Geography
+MainSubjectTaught	18	Geology
+MainSubjectTaught	19	History
+MainSubjectTaught	20	Mathematics
+MainSubjectTaught	21	Modern foreign languages
+MainSubjectTaught	22	Music
+MainSubjectTaught	23	Physical education
+MainSubjectTaught	24	Philosophy
+MainSubjectTaught	25	Physics
+MainSubjectTaught	26	Politics
+MainSubjectTaught	27	Psychology
+MainSubjectTaught	28	Religious studies
+MainSubjectTaught	29	Sociology
+MainSubjectTaught	30	Accounting and Finance
+MainSubjectTaught	31	Agriculture and Horticulture
+MainSubjectTaught	32	Animal Care
+MainSubjectTaught	33	Business Management and Administration
+MainSubjectTaught	34	Catering and Hospitality
+MainSubjectTaught	35	Construction, Planning and the Built Environment
+MainSubjectTaught	36	Crafts, Creative Arts and Design
+MainSubjectTaught	37	Design, Engineering and Manufacturing
+MainSubjectTaught	38	Digital / ICT
+MainSubjectTaught	39	Education and Childcare
+MainSubjectTaught	40	Education and Training
+MainSubjectTaught	41	Environmental
+MainSubjectTaught	42	Hair, Beauty and Aesthetics
+MainSubjectTaught	43	Health, Public Services and Care
+MainSubjectTaught	44	Law and Legal Services
+MainSubjectTaught	45	Media, Broadcast and Production
+MainSubjectTaught	46	Performing Arts
+MainSubjectTaught	47	Retail and Commercial Enterprise
+MainSubjectTaught	48	Science
+MainSubjectTaught	49	Sport, Leisure and Recreation
+MainSubjectTaught	50	Transport and Logistics
+MainSubjectTaught	51	Travel and Tourism
+MainSubjectTaught	52	Functional Skills English
+MainSubjectTaught	60	Functional Skills Maths
+MainSubjectTaught	61	Functional Skills IT
+MainSubjectTaught	53	Life Skills
+MainSubjectTaught	54	Preparation for Work
+MainSubjectTaught	55	Supported Learning or Special Educational Needs learning provision
+MainSubjectTaught	56	ESOL
+MainSubjectTaught	57	Community Learning
+MainSubjectTaught	58	Family Learning
+MainSubjectTaught	59	Other
+MostSeniorLeader	1	Yes
+MostSeniorLeader	2	No
+NumberContracts	1	One
+NumberContracts	2	More than one
+ProfessionalTeachingStatus	1	QTS (Qualified Teacher Status)
+ProfessionalTeachingStatus	2	QTLS (Qualified Teacher Learning and Skills status)
+ProfessionalTeachingStatus	3	Advanced teacher status (Society for Education and Training)
+ProfessionalTeachingStatus	4	Chartered teacher status (College of Teaching)
+ProfessionalTeachingStatus	10	Other
+ProfessionalTeachingStatus	11	None 
+ProfessionalTeachingStatus	12	Not known 
+ReasonForLeaving	1	Resignation - job change outside of education 
+ReasonForLeaving	2	Resignation - job change within FE sector
+ReasonForLeaving	3	Resignation - job change within education but not FE
+ReasonForLeaving	4	Resignation - career break
+ReasonForLeaving	5	Resignation - other 
+ReasonForLeaving	6	End of Contract
+ReasonForLeaving	7	Retirement 
+ReasonForLeaving	8	Redundancy – voluntary 
+ReasonForLeaving	9	Redundancy – compulsory 
+ReasonForLeaving	10	Deceased 
+ReasonForLeaving	11	Other
+MainRole	1	Senior Leader
+MainRole	2	Manager
+MainRole	3	Teacher
+MainRole	4	Teaching Support
+MainRole	5	Administration
+TeacherQualificationFunding	1	Yes, we’re paying for all of it 
+TeacherQualificationFunding	2	Yes, we’re paying for some of it
+TeacherQualificationFunding	3	No
+TeacherQualificationStudied	3	Level 3 Award in Education and Training, Level 3 Award in Preparing to Teach in the Lifelong Learning Sector (PTLLS)
+TeacherQualificationStudied	4	Level 4 in Education and Training, Level 4 Certificate in Teaching in the Lifelong Learning Sector
+TeacherQualificationStudied	5	Level 5  in Diploma in Education and Training, Level 5 Diploma in Teaching in the Lifelong Learning Sector (DTLLS), Level 5 Cert Ed
+TeacherQualificationStudied	6	Level 6 Bachelors in Education (BEd), Level 6 Professional certificate in education (PGCE)
+TeacherQualificationStudied	7	Level 7 Postgraduate Certificate in Education (PGCE)
+TeacherQualificationStudied	10	Other
+Role	1	Senior Leader
+Role	2	Manager
+Role	3	Teacher
+Role	4	Teaching Support
+Role	5	Administration

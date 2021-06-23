@@ -1,0 +1,102 @@
+﻿FD_DateofBirth_MA	E	The Date of Birth has not been returned
+FD_Gender_MA	E	The Gender field has not been returned
+FD_Ethnicity_MA	E	The Ethnicity field has not been returned
+FD_Disability_MA	E	The Disability field has not been returned
+FD_Role_MA	E	The Role field has not been returned
+FD_MainRole_MA	E	The Main Role field has not been returned
+FD_MostSeniorLeader_MA	E	The Most Senior Leader field has not been returned
+FD_EmploymentStartDate_MA	E	The Employment Start Date has not been returned
+FD_CurrentPositionDuration_MA	E	The Current Position Duration field has not been returned
+FD_FurtherEducationDuration_MA	E	The Further Education Duration field has not been returned
+BR_CampId_01	E	The CampId does not match the validation pattern
+BR_FirstName_01	E	The First Name does not match the validation pattern
+BR_LastName_01	E	The Last Name does not match the validation pattern
+BR_DateOfBirth_01	W	The staff member is over 80, please check
+BR_DateOfBirth_02	E	The staff member is over 115
+BR_DateOfBirth_03	E	The staff member is under 16
+BR_Ethnicity_01	E	The Ethnicity is not a valid code
+BR_Gender_01	E	The Gender is not a valid code
+BR_Disability_01	E	The Disability is not a valid code
+BR_Role_01	E	The Role is not a valid code
+BR_MainRole_01	E	The Main Role is not a valid code
+BR_MostSeniorLeader_01	E	The Most Senior Leader is not a valid code
+BR_MainSubjectTaught_01	E	The Main Subject Taught is not a valid code
+BR_HighestQualificationTaught_01	E	The Highest Qualification Taught is not a valid code
+BR_HighestQualificationEnglish_01	E	The Highest Qualification English is not a valid code
+BR_HighestQualificationMaths_01	E	The Highest Qualification Maths is not a valid code
+BR_HighestTeachingQualification_01	E	The Highest Teaching Qualification is not a valid code
+BR_TeacherQualificationStudied_01	E	The Teacher Qualification Studied is not a valid code
+BR_TeacherQualificationFunding_01	E	The Teacher Qualification Funding is not a valid code
+BR_ProfessionalTeachingStatus_01	E	The Professional Teaching Status is not a valid code
+BR_IndustryExperienceDuratione_01	E	The Industry Experience Duration is not a valid code
+BR_CurrentIndustryExperience_01	E	The Current Industry Experience is not a valid code
+BR_NumberContracts_01	E	The Number of Contracts is not a valid code
+BR_AnnualSalary_01	W	The Annual Salary is lower than expected, please check   
+BR_HourlyRate_01	W	The Hourly Rate is less than the apprentice minimum hourly rate, please check   
+BR_WeekContractedHours_01	W	Weekly hours are greater than 48, please check
+BR_WeekContractedHours_02	E	Weekly hours must be 60 hours or less
+BR_FTE_01	W	The FTE for the main contract is greater than 1.25 (i.e. 125%), please check 
+BR_EmploymentStartDate_01	E	The Employment Start Date must be returned
+BR_EmploymentStartDate_02	E	The Employment Start Date must be before the end of the academic year of the collection
+BR_CurrentPositionDuration_01	E	The Current Position Duration is not a valid code
+BR_EmploymentEndDate_01	E	The Employment End Date must be during the academic year of the collection
+BR_EmploymentEndDate_02	W	The Employment End Date must be during the academic year of the collection
+BR_EmploymentEndDate_03	E	The Employment End Date must be during the academic year of the collection
+BR_ReasonForLeaving_01	E	The Reason For Leaving is not a valid code
+CF_MostSeniorLeader_01	E	Staff member should not be indicated as the most senior leader if a senior leader role has not been provided for the same staff member 
+CF_MainRole_01	E	Staff member should not have a Main Role of senior leader if a senior leader Role has not been provided for the same staff member 
+CF_MainRole_02	E	Staff member should not have a Main Role of  manager if a  manager Role has not been provided for the same staff member 
+CF_MainRole_03	E	Staff member should not have a Main Role of  teacher if a  teacher Role has not been provided for the same staff member 
+CF_MainRole_04	E	Staff member should not have a Main Role of  teaching support if a teaching support Role has not been provided for the same staff member 
+CF_MainRole_05	E	Staff member should not have a Main Role of Administration if an Administration Role has not been provided for the same staff member 
+CF_MainSubjectTaught_01	E	Main Subject Taught should be provided for Staff members that teach  
+CF_MainSubjectTaught_02	E	Main Subject Taught should only be provided for Staff members that teach  
+CF_HighestQualificationTaught_01	E	Highest QualificationTaught should be provided for Staff members that teach  
+CF_HighestQualificationTaught_02	E	Highest QualificationTaught should only be provided for Staff members that teach  
+CF_HighestQualificationEnglish_01	E	Highest Qualification English should be provided for Staff members that teach  
+CF_HighestQualificationEnglish_02	E	Highest Qualification English should only be provided for Staff members that teach  
+CF_HighestQualificationMaths_01	E	Highest Qualification Maths should be provided for Staff members that teach  
+CF_HighestQualificationMaths_02	E	Highest Qualification Maths should only be provided for Staff members that teach  
+CF_HighestTeachingQualification_01	E	Highest Teaching Qualification should be provided for Staff members that teach  
+CF_HighestTeachingQualification_02	E	Highest Teaching Qualification should only be provided for Staff members that teach  
+CF_TeacherQualificationStudied_01	E	Teacher Qualification Studied should be provided for Staff members that are Working towards a teacher training qualification
+CF_TeacherQualificationStudied_02	E	Teacher Qualification Studied should only be provided for Staff members that are Working towards a teacher training qualification
+CF_TeacherQualificationFunding_01	E	Teacher Qualification Funding should be provided for Staff members that are Working towards a teacher training qualification
+CF_TeacherQualificationFunding_02	E	Teacher Qualification Funding should only be provided for Staff members that are Working towards a teacher training qualification
+CF_ProfessionalTeachingStatus_01	E	Professional Teaching Status should be provided for Staff members that teach  
+CF_ProfessionalTeachingStatus_02	E	Professional Teaching Status should only be provided for Staff members that teach  
+CF_IndustryExperienceDuration_01	E	Industry Experience Duration should be provided for Staff members that teach  
+CF_IndustryExperienceDuration_02	E	Industry Experience Duration should only be provided for Staff members that teach  
+CF_CurrentIndustryExperience_01	E	Current Industry Experience should be provided for Staff members that teach  
+CF_CurrentIndustryExperience_02	E	Current Industry Experience should only be provided for Staff members that teach  
+CF_WeeklyContractedHours_01	E	Weekly Contracted Hours should be provided for all permanent and fixed term staff   
+CF_FTE_01	E	FTE should be provided for all permanent and fixed term staff   
+CF_AnnualSalary_01	W	The Annual Salary is greater than  £1m, please check   
+CF_AnnualSalary_02	W	The Annual Salary is greater than  £0.5m, please check   
+CF_AnnualSalary_03	W	The Annual Salary is greater than  £100k, please check   
+CF_AnnualSalary_04	E	Either Annual Salary or Hourly Rate should be provided for a Staff member
+CF_HourlyRate_01	W	The Hourly Rate is calculated at an Annual Salary greater than £1m, please check   
+CF_HourlyRate_02	W	The Hourly Rate is calculated at an Annual Salary greater than £0.5m, please check   
+CF_HourlyRate_03	W	The Hourly Rate is calculated at an Annual Salary greater than £100k, please check   
+CF_ReasonForLeaving_01	E	Reason For Leaving should be provided and an Employment End Date has been provided for a Staff member 
+CF_ReasonForLeaving_02	E	Reason For Leaving should not be provided unless an Employment End Date has been provided for a Staff member 
+CR_MostSeniorLeader_01	W	Only one Most Senior Leader is expected to be provided, please check 
+CR_Role_01	E	Only one Senior Leader role can be provided for the same member of staff 
+CR_Role_02	E	Only one Manager role can be provided for the same member of staff 
+CR_Role_03	E	Only one Teacher role can be provided for the same member of staff 
+CR_Role_04	E	Only one Teaching Support role can be provided for the same member of staff 
+CR_Role_05	E	Only one Adminstration role can be provided for the same member of staff 
+CR_UniqueStaffMember_01	E	You cannot have 2 records on the file with the same UKPRN, First Name, Last Name and Date of Birth 
+BR_FTE_02	E	The FTE for the main contract must be 1.5 or less (i.e. 150%)
+FD_LastName_MA	E	Last Name has not been returned
+BR_EmploymentStartDate_03	W	The staff member has over 50 years service
+BR_CurrentPositionDuration_04	E	The Current Position Duration is not a valid code
+FD_FirstName_MA	E	First Name has not been returned
+FD_NumberContracts_MA	E	The Number of Contracts has not been returned
+BR_ContractType_01	E	The Contract Type is not a valid code
+FD_ContractType_MA	E	Contract Type has not been returned
+CF_TeacherData_01	E	The TeacherData enity has not been provided where a Teacher Role has been provided
+CF_TeacherData_02	E	The TeacherData enity has been provided but no teacher Role has been provided
+FD_MainContract_ME	E	The MainContract enity has not been returned
+BR_CampId_02	E	The Campus identifier is not valid
+BR_FurtherEducationDuration_01	E	The Further Education Duration is not a valid code

@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="ESFA/FEW/2021-22" targetNamespace="ESFA/FEW/2021-22" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+    <xs:simpleType name="RestrictedString">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z0-9 ~!@#$%&amp;'\(\)\*\+,\-\./:;&lt;=&gt;\?\[\\\]_\{\}\^&#xa3;&#x20ac;]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Message">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CollectionDetails">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Collection">
+											<xs:simpleType>
+												<xs:restriction base="RestrictedString">
+													<xs:enumeration value="FEW"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Year">
+											<xs:simpleType>
+												<xs:restriction base="RestrictedString">
+													<xs:enumeration value="2021"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="FilePreparationDate" type="xs:date"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+              <xs:element name="Source">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ProtectiveMarking">
+                      <xs:simpleType>
+                        <xs:restriction base="RestrictedString">
+                          <xs:enumeration value="OFFICIAL-SENSITIVE-Personal"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name="UKPRN">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:int">
+                          <xs:minInclusive value="10000000"/>
+                          <xs:maxInclusive value="99999999 "/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name="SoftwareSupplier" minOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="RestrictedString">
+                          <xs:maxLength value="40"/>
+                          <xs:minLength value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name="SoftwarePackage" minOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="RestrictedString">
+                          <xs:maxLength value="30"/>
+                          <xs:minLength value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name="Release" minOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="RestrictedString">
+                          <xs:maxLength value="20"/>
+                          <xs:minLength value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name="SerialNo">
+                      <xs:simpleType>
+                        <xs:restriction base="RestrictedString">
+                          <xs:pattern value="[0-9]{1,2}"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+
+                    <xs:element name="DateTime" type="xs:dateTime"/>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="StaffData" minOccurs="1" maxOccurs="50000">
+					<xs:complexType>
+						<xs:sequence>
+
+												
+							<xs:element name="CampusID" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[A-Za-z0-9]{1,8}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="FirstName" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[^0-9\r\n\t|&quot;]{1,100}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="LastName" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[^0-9\r\n\t|&quot;]{1,100}"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="DateOfBirth" type="xs:date" minOccurs="1">
+							</xs:element>
+
+							<xs:element name="Gender" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="Ethnicity" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="Disability" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+
+							<xs:element name="Role" minOccurs="1" maxOccurs="5">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Role" type="xs:int" >
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+
+							<xs:element name="MainRole" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="MostSeniorLeader" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="FTE" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="TeacherData" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+
+										<xs:element name="MainSubjectTaught" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="HighestQualificationTaught" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="HighestQualificationEnglish" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="HighestQualificationMaths" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="HighestTeachingQualification" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+
+										<xs:element name="TeacherQualificationStudied" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="TeacherQualificationFunding" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+
+										<xs:element name="ProfessionalTeachingStatus" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="IndustryExperienceDuration" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="CurrentIndustryExperience" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+
+
+
+							<xs:element name="NumberContracts" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+						
+							<xs:element name="MainContract" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="AnnualSalary" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="HourlyRate" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:decimal">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="WeekContractedHours" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:decimal">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+										<xs:element name="ContractType" minOccurs="1">
+											<xs:simpleType>
+												<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+
+																				
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+
+
+
+							<xs:element name="EmploymentStartDate" type="xs:date" minOccurs="1">
+							</xs:element>
+
+							<xs:element name="CurrentPositionDuration" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="FurtherEducationDuration" minOccurs="1">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="EmploymentEndDate" type="xs:date" minOccurs="0">
+							</xs:element>
+
+							<xs:element name="ReasonForLeaving" minOccurs="0">
+								<xs:simpleType>
+						     		<xs:restriction base="xs:int">
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+
+
+					</xs:complexType>	
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+
+	</xs:element>
+
+	
+</xs:schema>
