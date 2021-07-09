@@ -43,5 +43,11 @@ namespace ESFA.FEW.StaffEntry.Validation
         public string FurtherEducationDuration => "FurtherEducationDuration";
 
         public string ReasonForLeaving => "ReasonForLeaving";
+
+        public string MainRoleFieldKey => "MainRole";
+
+        public string HasTeachingResponsibilities => throw new System.NotImplementedException();
+
+        public string DoTheyStillWorkForTheOrganisation => throw new System.NotImplementedException();
     }
 }

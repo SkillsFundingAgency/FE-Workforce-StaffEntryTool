@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface;
@@ -39,6 +40,11 @@ namespace ESFA.FEW.StaffEntry.Validation
             return cache?.SingleOrDefault(x => x.Code == code)?.Id;
         }
 
+        public ReferenceDataItem GetById(string key, int lookupItemId)
+        {
+            throw new System.NotImplementedException();
+        }
+
         private ReferenceData LoadCacheData()
         {
             ReferenceData data = new ReferenceData
@@ -57,11 +63,17 @@ namespace ESFA.FEW.StaffEntry.Validation
                 if (lookupsList == null)
                 {
                     lookupsList = new List<ReferenceDataItem>();
-                    lookupsList.Add(new ReferenceDataItem(-1, -1, string.Empty));
+                    lookupsList.Add(new ReferenceDataItem(-1, -1)
+                    {
+                        Name = string.Empty
+                    });
                     data.Items.Add(bits[0], lookupsList);
                 }
 
-                lookupsList.Add(new ReferenceDataItem(int.Parse(bits[1]), int.Parse(bits[1]), bits[2].Trim()));
+                lookupsList.Add(new ReferenceDataItem(int.Parse(bits[1]), int.Parse(bits[1]))
+                {
+                    Name = bits[2].Trim()
+                });
             }
 
             return data;

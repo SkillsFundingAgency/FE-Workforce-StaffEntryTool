@@ -7,9 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="ESFA.DC.DateTimeProvider" Version="0.1.6-beta0001" />
-    <PackageReference Include="ESFA.DC.FEW.FileProcessingService.Rules" Version="0.2.137-beta.1" />
-    <PackageReference Include="ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface" Version="0.2.137-beta.1" />
-    <PackageReference Include="ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model" Version="0.2.137-beta.1" />
+    <PackageReference Include="ESFA.DC.FEW.FileProcessingService.Rules" Version="0.2.150-beta.1" />
+    <PackageReference Include="ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface" Version="0.2.150-beta.1" />
+    <PackageReference Include="ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model" Version="0.2.150-beta.1" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
