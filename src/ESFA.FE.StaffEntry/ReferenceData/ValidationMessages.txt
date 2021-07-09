@@ -70,7 +70,9 @@ CF_IndustryExperienceDuration_02	E	Industry Experience Duration should only be p
 CF_CurrentIndustryExperience_01	E	Current Industry Experience should be provided for Staff members that teach  
 CF_CurrentIndustryExperience_02	E	Current Industry Experience should only be provided for Staff members that teach  
 CF_WeeklyContractedHours_01	E	Weekly Contracted Hours should be provided for all permanent and fixed term staff   
-CF_FTE_01	E	FTE should be provided for all permanent and fixed term staff   
+CF_WeeklyContractedHours_02	E	Weekly Contracted Hours should only be provided for permanent and fixed term staff
+CF_FTE_01	E	FTE should be provided for all permanent and fixed term staff  
+CF_FTE_02	E	FTE should only be provided for permanent and fixed term staff 
 CF_AnnualSalary_01	W	The Annual Salary is greater than  £1m, please check   
 CF_AnnualSalary_02	W	The Annual Salary is greater than  £0.5m, please check   
 CF_AnnualSalary_03	W	The Annual Salary is greater than  £100k, please check   
@@ -95,8 +97,8 @@ FD_FirstName_MA	E	First Name has not been returned
 FD_NumberContracts_MA	E	The Number of Contracts has not been returned
 BR_ContractType_01	E	The Contract Type is not a valid code
 FD_ContractType_MA	E	Contract Type has not been returned
-CF_TeacherData_01	E	The TeacherData enity has not been provided where a Teacher Role has been provided
-CF_TeacherData_02	E	The TeacherData enity has been provided but no teacher Role has been provided
-FD_MainContract_ME	E	The MainContract enity has not been returned
+CF_TeacherData_01	E	The TeacherData entity has not been provided where a Teacher Role has been provided
+CF_TeacherData_02	E	The TeacherData entity has been provided but no teacher Role has been provided
+FD_MainContract_ME	E	The MainContract entity has not been returned
 BR_CampId_02	E	The Campus identifier is not valid
 BR_FurtherEducationDuration_01	E	The Further Education Duration is not a valid code

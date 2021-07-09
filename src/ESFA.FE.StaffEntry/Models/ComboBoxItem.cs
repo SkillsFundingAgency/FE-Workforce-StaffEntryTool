@@ -4,29 +4,29 @@ namespace ESFA.FE.StaffEntry.Models
 {
     public class ComboBoxItem
     {
-        private string _displayValue;
-
         public ComboBoxItem(string displayValue, int code)
         {
-            _displayValue = displayValue;
+            DisplayValue = displayValue;
             Code = code;
         }
+
+        public string DisplayValue { get; }
 
         public int Code { get; }
 
         public override string ToString()
         {
-            return _displayValue;
+            return DisplayValue;
         }
 
         public override bool Equals(object obj)
         {
-            return string.Equals(obj?.ToString(), _displayValue, StringComparison.CurrentCultureIgnoreCase);
+            return string.Equals(obj?.ToString(), DisplayValue, StringComparison.CurrentCultureIgnoreCase);
         }
 
         public override int GetHashCode()
         {
-            return _displayValue.GetHashCode();
+            return DisplayValue.GetHashCode();
         }
     }
 }

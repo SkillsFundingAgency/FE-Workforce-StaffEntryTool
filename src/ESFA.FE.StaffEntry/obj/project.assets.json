@@ -1,0 +1,1285 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "ESFA.DC.DateTimeProvider/0.1.6-beta0001": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider.Interface": "0.1.6-beta0001"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.dll": {}
+        }
+      },
+      "ESFA.DC.DateTimeProvider.Interface/0.1.6-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.Interface.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.Interface.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.2021.FileProcessingService.Model/0.2.150-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.2021.FileProcessingService.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.2021.FileProcessingService.Model.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Rules/0.2.150-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider.Interface": "0.1.6-beta0001",
+          "ESFA.DC.FEW.2021.FileProcessingService.Model": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface": "0.2.150-beta.1",
+          "FluentValidation": "8.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Rules.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Rules.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface/0.2.150-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": "0.2.150-beta.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model/0.2.150-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model.dll": {}
+        }
+      },
+      "ESFA.DC.IO.Interfaces/0.1.48-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.IO.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.IO.Interfaces.dll": {}
+        }
+      },
+      "ESFA.DC.Serialization.Interfaces/0.1.48-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Interfaces.dll": {}
+        }
+      },
+      "ESFA.DC.Serialization.Xml/0.1.48-beta0001": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.IO.Interfaces": "0.1.48-beta0001",
+          "ESFA.DC.Serialization.Interfaces": "0.1.48-beta0001"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Xml.dll": {}
+        }
+      },
+      "FluentValidation/8.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "compile": {
+          "lib/net45/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentValidation.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/3.1.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.14"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "StyleCop.Analyzers/1.1.118": {
+        "type": "package"
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.ComponentModel.Annotations.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "ESFA.FEW.StaffEntry.Validation/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider": "0.1.6-beta0001",
+          "ESFA.DC.FEW.FileProcessingService.Rules": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": "0.2.150-beta.1"
+        },
+        "compile": {
+          "bin/placeholder/ESFA.FEW.StaffEntry.Validation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ESFA.FEW.StaffEntry.Validation.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "ESFA.DC.DateTimeProvider/0.1.6-beta0001": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider.Interface": "0.1.6-beta0001"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.dll": {}
+        }
+      },
+      "ESFA.DC.DateTimeProvider.Interface/0.1.6-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.Interface.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.Interface.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.2021.FileProcessingService.Model/0.2.150-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.2021.FileProcessingService.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.2021.FileProcessingService.Model.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Rules/0.2.150-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider.Interface": "0.1.6-beta0001",
+          "ESFA.DC.FEW.2021.FileProcessingService.Model": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface": "0.2.150-beta.1",
+          "FluentValidation": "8.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Rules.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Rules.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface/0.2.150-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": "0.2.150-beta.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model/0.2.150-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model.dll": {}
+        }
+      },
+      "ESFA.DC.IO.Interfaces/0.1.48-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.IO.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.IO.Interfaces.dll": {}
+        }
+      },
+      "ESFA.DC.Serialization.Interfaces/0.1.48-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Interfaces.dll": {}
+        }
+      },
+      "ESFA.DC.Serialization.Xml/0.1.48-beta0001": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.IO.Interfaces": "0.1.48-beta0001",
+          "ESFA.DC.Serialization.Interfaces": "0.1.48-beta0001"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Xml.dll": {}
+        }
+      },
+      "FluentValidation/8.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "compile": {
+          "lib/net45/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentValidation.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/3.1.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.14"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "StyleCop.Analyzers/1.1.118": {
+        "type": "package"
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.ComponentModel.Annotations.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "ESFA.FEW.StaffEntry.Validation/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider": "0.1.6-beta0001",
+          "ESFA.DC.FEW.FileProcessingService.Rules": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": "0.2.150-beta.1"
+        },
+        "compile": {
+          "bin/placeholder/ESFA.FEW.StaffEntry.Validation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ESFA.FEW.StaffEntry.Validation.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "ESFA.DC.DateTimeProvider/0.1.6-beta0001": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider.Interface": "0.1.6-beta0001"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.dll": {}
+        }
+      },
+      "ESFA.DC.DateTimeProvider.Interface/0.1.6-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.Interface.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.Interface.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.2021.FileProcessingService.Model/0.2.150-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.2021.FileProcessingService.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.2021.FileProcessingService.Model.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Rules/0.2.150-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider.Interface": "0.1.6-beta0001",
+          "ESFA.DC.FEW.2021.FileProcessingService.Model": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface": "0.2.150-beta.1",
+          "FluentValidation": "8.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Rules.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Rules.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface/0.2.150-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": "0.2.150-beta.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model/0.2.150-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model.dll": {}
+        }
+      },
+      "ESFA.DC.IO.Interfaces/0.1.48-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.IO.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.IO.Interfaces.dll": {}
+        }
+      },
+      "ESFA.DC.Serialization.Interfaces/0.1.48-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Interfaces.dll": {}
+        }
+      },
+      "ESFA.DC.Serialization.Xml/0.1.48-beta0001": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.IO.Interfaces": "0.1.48-beta0001",
+          "ESFA.DC.Serialization.Interfaces": "0.1.48-beta0001"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Xml.dll": {}
+        }
+      },
+      "FluentValidation/8.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "compile": {
+          "lib/net45/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentValidation.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/3.1.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.14"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "StyleCop.Analyzers/1.1.118": {
+        "type": "package"
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.ComponentModel.Annotations.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "ESFA.FEW.StaffEntry.Validation/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider": "0.1.6-beta0001",
+          "ESFA.DC.FEW.FileProcessingService.Rules": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": "0.2.150-beta.1"
+        },
+        "compile": {
+          "bin/placeholder/ESFA.FEW.StaffEntry.Validation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ESFA.FEW.StaffEntry.Validation.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "ESFA.DC.DateTimeProvider/0.1.6-beta0001": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider.Interface": "0.1.6-beta0001"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.dll": {}
+        }
+      },
+      "ESFA.DC.DateTimeProvider.Interface/0.1.6-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.Interface.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.DateTimeProvider.Interface.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.2021.FileProcessingService.Model/0.2.150-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.2021.FileProcessingService.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.2021.FileProcessingService.Model.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Rules/0.2.150-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider.Interface": "0.1.6-beta0001",
+          "ESFA.DC.FEW.2021.FileProcessingService.Model": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface": "0.2.150-beta.1",
+          "FluentValidation": "8.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Rules.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Rules.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface/0.2.150-beta.1": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": "0.2.150-beta.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface.dll": {}
+        }
+      },
+      "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model/0.2.150-beta.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model.dll": {}
+        }
+      },
+      "ESFA.DC.IO.Interfaces/0.1.48-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.IO.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.IO.Interfaces.dll": {}
+        }
+      },
+      "ESFA.DC.Serialization.Interfaces/0.1.48-beta0001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Interfaces.dll": {}
+        }
+      },
+      "ESFA.DC.Serialization.Xml/0.1.48-beta0001": {
+        "type": "package",
+        "dependencies": {
+          "ESFA.DC.IO.Interfaces": "0.1.48-beta0001",
+          "ESFA.DC.Serialization.Interfaces": "0.1.48-beta0001"
+        },
+        "compile": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Xml.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ESFA.DC.Serialization.Xml.dll": {}
+        }
+      },
+      "FluentValidation/8.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "compile": {
+          "lib/net45/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentValidation.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/3.1.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.14"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "StyleCop.Analyzers/1.1.118": {
+        "type": "package"
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.ComponentModel.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.ComponentModel.Annotations.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "ESFA.FEW.StaffEntry.Validation/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider": "0.1.6-beta0001",
+          "ESFA.DC.FEW.FileProcessingService.Rules": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface": "0.2.150-beta.1",
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": "0.2.150-beta.1"
+        },
+        "compile": {
+          "bin/placeholder/ESFA.FEW.StaffEntry.Validation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ESFA.FEW.StaffEntry.Validation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ESFA.DC.DateTimeProvider/0.1.6-beta0001": {
+      "sha512": "Jn4xfDOrklQfaXgorfzEFWql9D/YO7V01cBto1ZPH+ODUbzJ+hnQKPww4SvPBxSqkiazZF95c3K0TfHQMgkfUg==",
+      "type": "package",
+      "path": "esfa.dc.datetimeprovider/0.1.6-beta0001",
+      "files": [
+        ".nupkg.metadata",
+        "esfa.dc.datetimeprovider.0.1.6-beta0001.nupkg.sha512",
+        "esfa.dc.datetimeprovider.nuspec",
+        "lib/netstandard2.0/ESFA.DC.DateTimeProvider.dll"
+      ]
+    },
+    "ESFA.DC.DateTimeProvider.Interface/0.1.6-beta0001": {
+      "sha512": "eP4YHUetPNhreU4MC1iV2We2eZ+vVDMIBzyNMeXHj/5gL/hIO7OsYyYBu1wz8P25vB7B6yXac66Xo4kSFLVLgg==",
+      "type": "package",
+      "path": "esfa.dc.datetimeprovider.interface/0.1.6-beta0001",
+      "files": [
+        ".nupkg.metadata",
+        "esfa.dc.datetimeprovider.interface.0.1.6-beta0001.nupkg.sha512",
+        "esfa.dc.datetimeprovider.interface.nuspec",
+        "lib/netstandard2.0/ESFA.DC.DateTimeProvider.Interface.dll"
+      ]
+    },
+    "ESFA.DC.FEW.2021.FileProcessingService.Model/0.2.150-beta.1": {
+      "sha512": "uJTHBrq05CJ/GG0xTCA5nm7VYA23e1jJCS0NX/afXVk9sZZKqcvxE2NDWxNevdKzwJXhTC7gUETeWyvAtKwBLw==",
+      "type": "package",
+      "path": "esfa.dc.few.2021.fileprocessingservice.model/0.2.150-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        "esfa.dc.few.2021.fileprocessingservice.model.0.2.150-beta.1.nupkg.sha512",
+        "esfa.dc.few.2021.fileprocessingservice.model.nuspec",
+        "lib/netstandard2.0/ESFA.DC.FEW.2021.FileProcessingService.Model.dll"
+      ]
+    },
+    "ESFA.DC.FEW.FileProcessingService.Rules/0.2.150-beta.1": {
+      "sha512": "BSwzPzrVIWHzUrPABjnw8Dbc7Cz0jtAI2Q3Bwy3xQbpUzKqqi3Fi+MwffXc7rf0SeleXan4N2YvBbvCG4s2pbA==",
+      "type": "package",
+      "path": "esfa.dc.few.fileprocessingservice.rules/0.2.150-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        "esfa.dc.few.fileprocessingservice.rules.0.2.150-beta.1.nupkg.sha512",
+        "esfa.dc.few.fileprocessingservice.rules.nuspec",
+        "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Rules.dll"
+      ]
+    },
+    "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface/0.2.150-beta.1": {
+      "sha512": "JMyuRhvVcdQ+WFqT7eG6Zt1zuKnu7Oq600G407zKUJC1uZJC/gV9/1/bItvIKvzEf5hZjNzQwf+XwXJ9dBE1bw==",
+      "type": "package",
+      "path": "esfa.dc.few.fileprocessingservice.service.referencedata.interface/0.2.150-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        "esfa.dc.few.fileprocessingservice.service.referencedata.interface.0.2.150-beta.1.nupkg.sha512",
+        "esfa.dc.few.fileprocessingservice.service.referencedata.interface.nuspec",
+        "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface.dll"
+      ]
+    },
+    "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model/0.2.150-beta.1": {
+      "sha512": "gRcnv0lt7b4STAtptQQJ2OoJzp8HlqA5RmOLj0bNAelc6dyK93nDtpc/44LbTnKPKQDN2xJQTRzz0xnCVDZEsQ==",
+      "type": "package",
+      "path": "esfa.dc.few.fileprocessingservice.service.referencedata.model/0.2.150-beta.1",
+      "files": [
+        ".nupkg.metadata",
+        "esfa.dc.few.fileprocessingservice.service.referencedata.model.0.2.150-beta.1.nupkg.sha512",
+        "esfa.dc.few.fileprocessingservice.service.referencedata.model.nuspec",
+        "lib/netstandard2.0/ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model.dll"
+      ]
+    },
+    "ESFA.DC.IO.Interfaces/0.1.48-beta0001": {
+      "sha512": "N0K4sA3JM+tY+FmNnGgeYuw1mBh+5bjoAUtHWhETiDM/QiBWUgyKJe0MJaCVNlrbGcuS8d0k1dJwK3qN7dGhsg==",
+      "type": "package",
+      "path": "esfa.dc.io.interfaces/0.1.48-beta0001",
+      "files": [
+        ".nupkg.metadata",
+        "esfa.dc.io.interfaces.0.1.48-beta0001.nupkg.sha512",
+        "esfa.dc.io.interfaces.nuspec",
+        "lib/netstandard2.0/ESFA.DC.IO.Interfaces.dll"
+      ]
+    },
+    "ESFA.DC.Serialization.Interfaces/0.1.48-beta0001": {
+      "sha512": "9+SV56+vDUuQnVEYF0Oj1GPmPlDx/6+RPmNak1O40HmZ3jb0sYBh3IfGplDHSwhz9po/dKphPlKnHasNtZNofg==",
+      "type": "package",
+      "path": "esfa.dc.serialization.interfaces/0.1.48-beta0001",
+      "files": [
+        ".nupkg.metadata",
+        "esfa.dc.serialization.interfaces.0.1.48-beta0001.nupkg.sha512",
+        "esfa.dc.serialization.interfaces.nuspec",
+        "lib/netstandard2.0/ESFA.DC.Serialization.Interfaces.dll"
+      ]
+    },
+    "ESFA.DC.Serialization.Xml/0.1.48-beta0001": {
+      "sha512": "xJi4iVqLIkaqzh5VadpwgLXfPnFs6prFTfAzgt1woIUuMxKDbxKLULJZI+nJYvf7dwHhQHpJIvwZOcDCYS34Tw==",
+      "type": "package",
+      "path": "esfa.dc.serialization.xml/0.1.48-beta0001",
+      "files": [
+        ".nupkg.metadata",
+        "esfa.dc.serialization.xml.0.1.48-beta0001.nupkg.sha512",
+        "esfa.dc.serialization.xml.nuspec",
+        "lib/netstandard2.0/ESFA.DC.Serialization.Xml.dll"
+      ]
+    },
+    "FluentValidation/8.4.0": {
+      "sha512": "/VApywgD2sqD3aB1tzub6SIItmwxXN0D5yAiP3kuFHmjYO1W+Ryi531/m4O03/hlfcYrBgewDJn7Jd1Xk0vTdw==",
+      "type": "package",
+      "path": "fluentvalidation/8.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidation.8.4.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net45/FluentValidation.dll",
+        "lib/net45/FluentValidation.xml",
+        "lib/netstandard1.1/FluentValidation.dll",
+        "lib/netstandard1.1/FluentValidation.xml",
+        "lib/netstandard1.6/FluentValidation.dll",
+        "lib/netstandard1.6/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+      "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/3.1.14": {
+      "sha512": "8Y0ERNlu5zQAcrh9k6E+6ZHHA9NuBwK9N7RqEpx8eyMbl1DOHblerXFLtuKoBY1x+GafDdZXKEmfU7DEfCSb7g==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/3.1.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.3.1.14.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.14": {
+      "sha512": "DKI1KGqMqIRV9fc4UKlLsYIbFBz+syMcXwnpI2G1Sc5GNKSlx8yl8uQEJR6e5DAxTla+kVd8JOa0jHcvy7Lm7A==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.3.1.14.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "StyleCop.Analyzers/1.1.118": {
+      "sha512": "Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+      "type": "package",
+      "path": "stylecop.analyzers/1.1.118",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.txt",
+        "analyzers/dotnet/cs/StyleCop.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/StyleCop.Analyzers.dll",
+        "analyzers/dotnet/cs/de-DE/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/en-GB/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/es-MX/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/fr-FR/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pl-PL/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pt-BR/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ru-RU/StyleCop.Analyzers.resources.dll",
+        "stylecop.analyzers.1.1.118.nupkg.sha512",
+        "stylecop.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "System.ComponentModel.Annotations/4.4.1": {
+      "sha512": "ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
+      "type": "package",
+      "path": "system.componentmodel.annotations/4.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net461/System.ComponentModel.Annotations.dll",
+        "lib/netcore50/System.ComponentModel.Annotations.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "lib/portable-net45+win8/_._",
+        "lib/win8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net461/System.ComponentModel.Annotations.dll",
+        "ref/net461/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/System.ComponentModel.Annotations.dll",
+        "ref/netcore50/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
+        "ref/portable-net45+win8/_._",
+        "ref/win8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.annotations.4.4.1.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.3": {
+      "sha512": "3TIsJhD1EiiT0w2CcDMN/iSSwnNnsrnbzeVHSKkaEgV85txMprmuO+Yq2AdSbeVGcg28pdNDTPK87tJhX7VFHw==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "ESFA.FEW.StaffEntry.Validation/1.0.0": {
+      "type": "project",
+      "path": "../ESFA.FEW.StaffEntry.Validation/ESFA.FEW.StaffEntry.Validation.csproj",
+      "msbuildProject": "../ESFA.FEW.StaffEntry.Validation/ESFA.FEW.StaffEntry.Validation.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "ESFA.DC.DateTimeProvider >= 0.1.6-beta0001",
+      "ESFA.DC.FEW.FileProcessingService.Rules >= 0.2.150-beta.1",
+      "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model >= 0.2.150-beta.1",
+      "ESFA.DC.Serialization.Xml >= 0.1.48-beta0001",
+      "ESFA.FEW.StaffEntry.Validation >= 1.0.0",
+      "Microsoft.Extensions.DependencyInjection >= 3.1.14",
+      "StyleCop.Analyzers >= 1.1.118"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\russell\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FE.StaffEntry\\ESFA.FEW.StaffEntry.csproj",
+      "projectName": "ESFA.FEW.StaffEntry",
+      "projectPath": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FE.StaffEntry\\ESFA.FEW.StaffEntry.csproj",
+      "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FE.StaffEntry\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {
+            "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FEW.StaffEntry.Validation\\ESFA.FEW.StaffEntry.Validation.csproj": {
+              "projectPath": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FEW.StaffEntry.Validation\\ESFA.FEW.StaffEntry.Validation.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "ESFA.DC.DateTimeProvider": {
+            "target": "Package",
+            "version": "[0.1.6-beta0001, )"
+          },
+          "ESFA.DC.FEW.FileProcessingService.Rules": {
+            "target": "Package",
+            "version": "[0.2.150-beta.1, )"
+          },
+          "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": {
+            "target": "Package",
+            "version": "[0.2.150-beta.1, )"
+          },
+          "ESFA.DC.Serialization.Xml": {
+            "target": "Package",
+            "version": "[0.1.48-beta0001, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[3.1.14, )"
+          },
+          "StyleCop.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.1.118, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

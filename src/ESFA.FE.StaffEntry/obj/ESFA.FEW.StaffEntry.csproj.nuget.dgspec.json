@@ -1,0 +1,165 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FE.StaffEntry\\ESFA.FEW.StaffEntry.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FE.StaffEntry\\ESFA.FEW.StaffEntry.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FE.StaffEntry\\ESFA.FEW.StaffEntry.csproj",
+        "projectName": "ESFA.FEW.StaffEntry",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FE.StaffEntry\\ESFA.FEW.StaffEntry.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FE.StaffEntry\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FEW.StaffEntry.Validation\\ESFA.FEW.StaffEntry.Validation.csproj": {
+                "projectPath": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FEW.StaffEntry.Validation\\ESFA.FEW.StaffEntry.Validation.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "ESFA.DC.DateTimeProvider": {
+              "target": "Package",
+              "version": "[0.1.6-beta0001, )"
+            },
+            "ESFA.DC.FEW.FileProcessingService.Rules": {
+              "target": "Package",
+              "version": "[0.2.150-beta.1, )"
+            },
+            "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": {
+              "target": "Package",
+              "version": "[0.2.150-beta.1, )"
+            },
+            "ESFA.DC.Serialization.Xml": {
+              "target": "Package",
+              "version": "[0.1.48-beta0001, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FEW.StaffEntry.Validation\\ESFA.FEW.StaffEntry.Validation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FEW.StaffEntry.Validation\\ESFA.FEW.StaffEntry.Validation.csproj",
+        "projectName": "ESFA.FEW.StaffEntry.Validation",
+        "projectPath": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FEW.StaffEntry.Validation\\ESFA.FEW.StaffEntry.Validation.csproj",
+        "packagesPath": "C:\\Users\\russell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\russell\\Source\\Repos\\FE-Workforce-StaffEntryTool2\\src\\ESFA.FEW.StaffEntry.Validation\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\russell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://sfa-gov-uk.pkgs.visualstudio.com/_packaging/dct-pkg@Local/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "ESFA.DC.DateTimeProvider": {
+              "target": "Package",
+              "version": "[0.1.6-beta0001, )"
+            },
+            "ESFA.DC.FEW.FileProcessingService.Rules": {
+              "target": "Package",
+              "version": "[0.2.150-beta.1, )"
+            },
+            "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface": {
+              "target": "Package",
+              "version": "[0.2.150-beta.1, )"
+            },
+            "ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Model": {
+              "target": "Package",
+              "version": "[0.2.150-beta.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

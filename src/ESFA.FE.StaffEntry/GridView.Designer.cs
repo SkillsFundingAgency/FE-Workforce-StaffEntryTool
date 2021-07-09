@@ -38,50 +38,6 @@ namespace ESFA.FE.StaffEntry
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.grid = new System.Windows.Forms.DataGridView();
-            this.gridContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButtonOpenFile = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonExport = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonCopy = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonPasteItem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonPasteNewRows = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonDeleteRow = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonDeleteAll = new System.Windows.Forms.ToolStripButton();
-            this.ApplicationVersion = new System.Windows.Forms.Label();
-            this.collectionYear = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ukprn = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.mainMenu = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openWorkforceDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveWorkforceDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportForUploadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItemCopy = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasteItemToolStripMenuPasteItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasteAsnewRowsToolStripMenuPasteAsNewRows = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteSelectedRowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteAllDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewMaskedTextColumn1 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewMaskedTextColumn2 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
-            this.dataGridViewMaskedTextColumn3 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewMaskedTextColumn4 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
-            this.dataGridViewMaskedTextColumn5 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
             this.MessageStaffData_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MessageStaffData_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MessageStaffData_DateOfBirth = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
@@ -117,6 +73,66 @@ namespace ESFA.FE.StaffEntry
             this.MessageStaffData_CurrentPositionDuration = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.MessageStaffData_FurtherEducationDuration = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.MessageStaffData_ReasonForLeaving = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.gridContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.deleteStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.showErrorsWarningsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButtonOpenFile = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonExport = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonCopy = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonPasteItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonPasteNewRows = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonDeleteRow = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonDeleteAll = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonFilterAll = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonFilterWarnings = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonFilterErrors = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonFreezeColumns = new System.Windows.Forms.ToolStripButton();
+            this.ApplicationVersion = new System.Windows.Forms.Label();
+            this.collectionYear = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ukprn = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.mainMenu = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openWorkforceDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveWorkforceDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportForUploadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyToolStripMenuItemCopy = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteItemToolStripMenuPasteItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteAsnewRowsToolStripMenuPasteAsNewRows = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteSelectedRowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteAllDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemFilterAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemFilterWarnings = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemFilterErrors = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.freezeFirstAndLastNameColumnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewMaskedTextColumn1 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewMaskedTextColumn2 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
+            this.dataGridViewMaskedTextColumn3 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewMaskedTextColumn4 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
+            this.dataGridViewMaskedTextColumn5 = new ESFA.FE.StaffEntry.Control.DataGridViewMaskedTextColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -219,418 +235,6 @@ namespace ESFA.FE.StaffEntry
             this.grid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellValueChanged);
             this.grid.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.grid_EditingControlShowing);
             this.grid.MouseUp += new System.Windows.Forms.MouseEventHandler(this.grid_MouseUp);
-            // 
-            // gridContextMenu
-            // 
-            this.gridContextMenu.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.gridContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyToolStripMenuItem,
-            this.pasteToolStripMenuItem,
-            this.deleteStripMenuItem});
-            this.gridContextMenu.Name = "gridContextMenu";
-            this.gridContextMenu.Size = new System.Drawing.Size(145, 70);
-            // 
-            // copyToolStripMenuItem
-            // 
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.copyToolStripMenuItem.Text = "&Copy";
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
-            // 
-            // pasteToolStripMenuItem
-            // 
-            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.pasteToolStripMenuItem.Text = "&Paste";
-            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
-            // 
-            // deleteStripMenuItem
-            // 
-            this.deleteStripMenuItem.Name = "deleteStripMenuItem";
-            this.deleteStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.deleteStripMenuItem.Text = "Delete";
-            this.deleteStripMenuItem.Click += new System.EventHandler(this.deleteStripMenuItem_Click);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonOpenFile,
-            this.toolStripButtonSave,
-            this.toolStripButtonExport,
-            this.toolStripSeparator1,
-            this.toolStripButtonCopy,
-            this.toolStripButtonPasteItem,
-            this.toolStripButtonPasteNewRows,
-            this.toolStripSeparator2,
-            this.toolStripButtonDeleteRow,
-            this.toolStripButtonDeleteAll});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1180, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButtonOpenFile
-            // 
-            this.toolStripButtonOpenFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonOpenFile.Image = global::ESFA.FE.StaffEntry.Properties.Resources.OpenFile_16x;
-            this.toolStripButtonOpenFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButtonOpenFile.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonOpenFile.Name = "toolStripButtonOpenFile";
-            this.toolStripButtonOpenFile.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonOpenFile.Text = "Open file";
-            this.toolStripButtonOpenFile.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButtonSave
-            // 
-            this.toolStripButtonSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonSave.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Save_16x;
-            this.toolStripButtonSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonSave.Name = "toolStripButtonSave";
-            this.toolStripButtonSave.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonSave.Text = "toolStripButtonSave";
-            this.toolStripButtonSave.ToolTipText = "Save data";
-            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButtonExport
-            // 
-            this.toolStripButtonExport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonExport.Image = global::ESFA.FE.StaffEntry.Properties.Resources.CloudUpload_16x;
-            this.toolStripButtonExport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButtonExport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonExport.Name = "toolStripButtonExport";
-            this.toolStripButtonExport.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonExport.Text = "toolStripButtonExport";
-            this.toolStripButtonExport.ToolTipText = "Export data";
-            this.toolStripButtonExport.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButtonCopy
-            // 
-            this.toolStripButtonCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonCopy.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Copy_16x;
-            this.toolStripButtonCopy.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButtonCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonCopy.Name = "toolStripButtonCopy";
-            this.toolStripButtonCopy.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonCopy.Text = "Copy selected cell(s)";
-            this.toolStripButtonCopy.Click += new System.EventHandler(this.toolStripButtonCopy_Click);
-            // 
-            // toolStripButtonPasteItem
-            // 
-            this.toolStripButtonPasteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonPasteItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Paste_16x;
-            this.toolStripButtonPasteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButtonPasteItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonPasteItem.Name = "toolStripButtonPasteItem";
-            this.toolStripButtonPasteItem.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonPasteItem.Text = "Paste item";
-            this.toolStripButtonPasteItem.Click += new System.EventHandler(this.toolStripButtonPasteItem_Click);
-            // 
-            // toolStripButtonPasteNewRows
-            // 
-            this.toolStripButtonPasteNewRows.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonPasteNewRows.Image = global::ESFA.FE.StaffEntry.Properties.Resources.PasteTable_16x;
-            this.toolStripButtonPasteNewRows.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButtonPasteNewRows.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonPasteNewRows.Name = "toolStripButtonPasteNewRows";
-            this.toolStripButtonPasteNewRows.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonPasteNewRows.Text = "Paste as new row(s)";
-            this.toolStripButtonPasteNewRows.Click += new System.EventHandler(this.toolStripButtonPasteNewRows_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButtonDeleteRow
-            // 
-            this.toolStripButtonDeleteRow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonDeleteRow.Image = global::ESFA.FE.StaffEntry.Properties.Resources.DeleteTableRow_16x;
-            this.toolStripButtonDeleteRow.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButtonDeleteRow.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonDeleteRow.Name = "toolStripButtonDeleteRow";
-            this.toolStripButtonDeleteRow.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonDeleteRow.Text = "Delete selected row(s)";
-            this.toolStripButtonDeleteRow.ToolTipText = "Delete selected row(s)";
-            this.toolStripButtonDeleteRow.Click += new System.EventHandler(this.toolStripButtonDeleteRow_Click);
-            // 
-            // toolStripButtonDeleteAll
-            // 
-            this.toolStripButtonDeleteAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonDeleteAll.Image = global::ESFA.FE.StaffEntry.Properties.Resources.DeleteAllRows_16x;
-            this.toolStripButtonDeleteAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButtonDeleteAll.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonDeleteAll.Name = "toolStripButtonDeleteAll";
-            this.toolStripButtonDeleteAll.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonDeleteAll.Text = "toolStripButtonDeleteAll";
-            this.toolStripButtonDeleteAll.ToolTipText = "Delete all data";
-            this.toolStripButtonDeleteAll.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // ApplicationVersion
-            // 
-            this.ApplicationVersion.AccessibleDescription = "Version number information for the application";
-            this.ApplicationVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ApplicationVersion.Location = new System.Drawing.Point(817, 28);
-            this.ApplicationVersion.Name = "ApplicationVersion";
-            this.ApplicationVersion.Size = new System.Drawing.Size(351, 13);
-            this.ApplicationVersion.TabIndex = 4;
-            this.ApplicationVersion.Text = "<<version>>";
-            this.ApplicationVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // collectionYear
-            // 
-            this.collectionYear.Location = new System.Drawing.Point(246, 15);
-            this.collectionYear.MaxLength = 4;
-            this.collectionYear.Name = "collectionYear";
-            this.collectionYear.Size = new System.Drawing.Size(100, 20);
-            this.collectionYear.TabIndex = 3;
-            this.collectionYear.Visible = false;
-            this.collectionYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IsNumeric_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(203, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Year";
-            this.label2.Visible = false;
-            // 
-            // ukprn
-            // 
-            this.ukprn.Location = new System.Drawing.Point(55, 15);
-            this.ukprn.Name = "ukprn";
-            this.ukprn.Size = new System.Drawing.Size(100, 20);
-            this.ukprn.TabIndex = 1;
-            this.ukprn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IsNumeric_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ukprn";
-            // 
-            // mainMenu
-            // 
-            this.mainMenu.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.dataToolStripMenuItem});
-            this.mainMenu.Location = new System.Drawing.Point(0, 0);
-            this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(1180, 24);
-            this.mainMenu.TabIndex = 2;
-            this.mainMenu.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openWorkforceDataToolStripMenuItem,
-            this.saveWorkforceDataToolStripMenuItem,
-            this.exportForUploadToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "&File";
-            // 
-            // openWorkforceDataToolStripMenuItem
-            // 
-            this.openWorkforceDataToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.OpenFile_16x;
-            this.openWorkforceDataToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.openWorkforceDataToolStripMenuItem.Name = "openWorkforceDataToolStripMenuItem";
-            this.openWorkforceDataToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.openWorkforceDataToolStripMenuItem.Text = "&Open Workforce data";
-            this.openWorkforceDataToolStripMenuItem.Click += new System.EventHandler(this.openWorkforceDataToolStripMenuItem_Click);
-            // 
-            // saveWorkforceDataToolStripMenuItem
-            // 
-            this.saveWorkforceDataToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Save_16x;
-            this.saveWorkforceDataToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.saveWorkforceDataToolStripMenuItem.Name = "saveWorkforceDataToolStripMenuItem";
-            this.saveWorkforceDataToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.saveWorkforceDataToolStripMenuItem.Text = "&Save Workforce data";
-            this.saveWorkforceDataToolStripMenuItem.Click += new System.EventHandler(this.saveWorkforceDataToolStripMenuItem_Click);
-            // 
-            // exportForUploadToolStripMenuItem
-            // 
-            this.exportForUploadToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.CloudUpload_16x;
-            this.exportForUploadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.exportForUploadToolStripMenuItem.Name = "exportForUploadToolStripMenuItem";
-            this.exportForUploadToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.exportForUploadToolStripMenuItem.Text = "&Export for upload";
-            this.exportForUploadToolStripMenuItem.Click += new System.EventHandler(this.exportForUploadToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(184, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Exit_16x;
-            this.exitToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyToolStripMenuItemCopy,
-            this.pasteItemToolStripMenuPasteItem,
-            this.pasteAsnewRowsToolStripMenuPasteAsNewRows});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "&Edit";
-            // 
-            // copyToolStripMenuItemCopy
-            // 
-            this.copyToolStripMenuItemCopy.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Copy_16x;
-            this.copyToolStripMenuItemCopy.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.copyToolStripMenuItemCopy.Name = "copyToolStripMenuItemCopy";
-            this.copyToolStripMenuItemCopy.Size = new System.Drawing.Size(182, 22);
-            this.copyToolStripMenuItemCopy.Text = "&Copy selected cell(s)";
-            this.copyToolStripMenuItemCopy.Click += new System.EventHandler(this.copyToolStripMenuItemCopy_Click);
-            // 
-            // pasteItemToolStripMenuPasteItem
-            // 
-            this.pasteItemToolStripMenuPasteItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Paste_16x;
-            this.pasteItemToolStripMenuPasteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.pasteItemToolStripMenuPasteItem.Name = "pasteItemToolStripMenuPasteItem";
-            this.pasteItemToolStripMenuPasteItem.Size = new System.Drawing.Size(182, 22);
-            this.pasteItemToolStripMenuPasteItem.Text = "Paste &item";
-            this.pasteItemToolStripMenuPasteItem.Click += new System.EventHandler(this.pasteItemToolStripMenuPasteItem_Click);
-            // 
-            // pasteAsnewRowsToolStripMenuPasteAsNewRows
-            // 
-            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Image = global::ESFA.FE.StaffEntry.Properties.Resources.PasteTable_16x;
-            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Name = "pasteAsnewRowsToolStripMenuPasteAsNewRows";
-            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Size = new System.Drawing.Size(182, 22);
-            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Text = "Paste as &new row(s)";
-            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Click += new System.EventHandler(this.pasteAsnewRowsToolStripMenuPasteAsNewRows_Click);
-            // 
-            // dataToolStripMenuItem
-            // 
-            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteSelectedRowsToolStripMenuItem,
-            this.deleteAllDataToolStripMenuItem});
-            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.dataToolStripMenuItem.Text = "&Data";
-            // 
-            // deleteSelectedRowsToolStripMenuItem
-            // 
-            this.deleteSelectedRowsToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.DeleteTableRow_16x;
-            this.deleteSelectedRowsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deleteSelectedRowsToolStripMenuItem.Name = "deleteSelectedRowsToolStripMenuItem";
-            this.deleteSelectedRowsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.deleteSelectedRowsToolStripMenuItem.Text = "Delete selected row(s)";
-            this.deleteSelectedRowsToolStripMenuItem.Click += new System.EventHandler(this.deleteSelectedRowsToolStripMenuItem_Click);
-            // 
-            // deleteAllDataToolStripMenuItem
-            // 
-            this.deleteAllDataToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.DeleteAllRows_16x;
-            this.deleteAllDataToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deleteAllDataToolStripMenuItem.Name = "deleteAllDataToolStripMenuItem";
-            this.deleteAllDataToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.deleteAllDataToolStripMenuItem.Text = "Delete &all data";
-            this.deleteAllDataToolStripMenuItem.Click += new System.EventHandler(this.deleteAllDataToolStripMenuItem_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 200;
-            // 
-            // dataGridViewMaskedTextColumn1
-            // 
-            this.dataGridViewMaskedTextColumn1.HeaderText = "Date Of Birth";
-            this.dataGridViewMaskedTextColumn1.Mask = "00/00/0000";
-            this.dataGridViewMaskedTextColumn1.MinimumWidth = 10;
-            this.dataGridViewMaskedTextColumn1.Name = "dataGridViewMaskedTextColumn1";
-            this.dataGridViewMaskedTextColumn1.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "FTE";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Campus ID";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 200;
-            // 
-            // dataGridViewMaskedTextColumn2
-            // 
-            this.dataGridViewMaskedTextColumn2.HeaderText = "Annual Salary";
-            this.dataGridViewMaskedTextColumn2.Mask = "$999999";
-            this.dataGridViewMaskedTextColumn2.MinimumWidth = 10;
-            this.dataGridViewMaskedTextColumn2.Name = "dataGridViewMaskedTextColumn2";
-            this.dataGridViewMaskedTextColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewMaskedTextColumn2.Width = 200;
-            // 
-            // dataGridViewMaskedTextColumn3
-            // 
-            this.dataGridViewMaskedTextColumn3.HeaderText = "Hourly Rate";
-            this.dataGridViewMaskedTextColumn3.Mask = "$9999.00";
-            this.dataGridViewMaskedTextColumn3.MinimumWidth = 10;
-            this.dataGridViewMaskedTextColumn3.Name = "dataGridViewMaskedTextColumn3";
-            this.dataGridViewMaskedTextColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewMaskedTextColumn3.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Week Contracted Hours";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 200;
-            // 
-            // dataGridViewMaskedTextColumn4
-            // 
-            this.dataGridViewMaskedTextColumn4.HeaderText = "Employment Start Date";
-            this.dataGridViewMaskedTextColumn4.Mask = "00/00/0000";
-            this.dataGridViewMaskedTextColumn4.MinimumWidth = 10;
-            this.dataGridViewMaskedTextColumn4.Name = "dataGridViewMaskedTextColumn4";
-            this.dataGridViewMaskedTextColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewMaskedTextColumn4.Width = 200;
-            // 
-            // dataGridViewMaskedTextColumn5
-            // 
-            this.dataGridViewMaskedTextColumn5.HeaderText = "Employment End Date";
-            this.dataGridViewMaskedTextColumn5.Mask = "00/00/0000";
-            this.dataGridViewMaskedTextColumn5.MinimumWidth = 10;
-            this.dataGridViewMaskedTextColumn5.Name = "dataGridViewMaskedTextColumn5";
-            this.dataGridViewMaskedTextColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewMaskedTextColumn5.Width = 200;
             // 
             // MessageStaffData_FirstName
             // 
@@ -1122,6 +726,572 @@ namespace ESFA.FE.StaffEntry
             this.MessageStaffData_ReasonForLeaving.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.MessageStaffData_ReasonForLeaving.Width = 250;
             // 
+            // gridContextMenu
+            // 
+            this.gridContextMenu.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.gridContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyToolStripMenuItem,
+            this.pasteItemToolStripMenuItem,
+            this.pasteToolStripMenuItem,
+            this.toolStripSeparator6,
+            this.deleteStripMenuItem,
+            this.toolStripSeparator7,
+            this.showErrorsWarningsToolStripMenuItem});
+            this.gridContextMenu.Name = "gridContextMenu";
+            this.gridContextMenu.Size = new System.Drawing.Size(192, 148);
+            // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Copy_16x;
+            this.copyToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.copyToolStripMenuItem.Text = "&Copy";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            // 
+            // pasteItemToolStripMenuItem
+            // 
+            this.pasteItemToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Paste_16x;
+            this.pasteItemToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.pasteItemToolStripMenuItem.Name = "pasteItemToolStripMenuItem";
+            this.pasteItemToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.pasteItemToolStripMenuItem.Text = "Paste& item(s)";
+            this.pasteItemToolStripMenuItem.Click += new System.EventHandler(this.pasteItemToolStripMenuItem_Click);
+            // 
+            // pasteToolStripMenuItem
+            // 
+            this.pasteToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.PasteTable_16x;
+            this.pasteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.pasteToolStripMenuItem.Text = "Paste as &new row(s)";
+            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(188, 6);
+            // 
+            // deleteStripMenuItem
+            // 
+            this.deleteStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.DeleteTableRow_16x;
+            this.deleteStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteStripMenuItem.Name = "deleteStripMenuItem";
+            this.deleteStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.deleteStripMenuItem.Text = "Delete &selected row(s)";
+            this.deleteStripMenuItem.Click += new System.EventHandler(this.deleteStripMenuItem_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(188, 6);
+            // 
+            // showErrorsWarningsToolStripMenuItem
+            // 
+            this.showErrorsWarningsToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.ErrorSummary_16x;
+            this.showErrorsWarningsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showErrorsWarningsToolStripMenuItem.Name = "showErrorsWarningsToolStripMenuItem";
+            this.showErrorsWarningsToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.showErrorsWarningsToolStripMenuItem.Text = "Show Errors/Warnings";
+            this.showErrorsWarningsToolStripMenuItem.Click += new System.EventHandler(this.showErrorsWarningsToolStripMenuItem_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonOpenFile,
+            this.toolStripButtonSave,
+            this.toolStripButtonExport,
+            this.toolStripSeparator1,
+            this.toolStripButtonCopy,
+            this.toolStripButtonPasteItem,
+            this.toolStripButtonPasteNewRows,
+            this.toolStripSeparator2,
+            this.toolStripButtonDeleteRow,
+            this.toolStripButtonDeleteAll,
+            this.toolStripSeparator3,
+            this.toolStripButtonFilterAll,
+            this.toolStripButtonFilterWarnings,
+            this.toolStripButtonFilterErrors,
+            this.toolStripSeparator5,
+            this.toolStripButtonFreezeColumns});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1180, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButtonOpenFile
+            // 
+            this.toolStripButtonOpenFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonOpenFile.Image = global::ESFA.FE.StaffEntry.Properties.Resources.OpenFile_16x;
+            this.toolStripButtonOpenFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonOpenFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonOpenFile.Name = "toolStripButtonOpenFile";
+            this.toolStripButtonOpenFile.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonOpenFile.Text = "Open file";
+            this.toolStripButtonOpenFile.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButtonSave
+            // 
+            this.toolStripButtonSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonSave.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Save_16x;
+            this.toolStripButtonSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSave.Name = "toolStripButtonSave";
+            this.toolStripButtonSave.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonSave.Text = "toolStripButtonSave";
+            this.toolStripButtonSave.ToolTipText = "Save data";
+            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButtonExport
+            // 
+            this.toolStripButtonExport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonExport.Image = global::ESFA.FE.StaffEntry.Properties.Resources.CloudUpload_16x;
+            this.toolStripButtonExport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonExport.Name = "toolStripButtonExport";
+            this.toolStripButtonExport.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonExport.Text = "toolStripButtonExport";
+            this.toolStripButtonExport.ToolTipText = "Export data";
+            this.toolStripButtonExport.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButtonCopy
+            // 
+            this.toolStripButtonCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonCopy.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Copy_16x;
+            this.toolStripButtonCopy.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCopy.Name = "toolStripButtonCopy";
+            this.toolStripButtonCopy.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonCopy.Text = "Copy selected cell(s)";
+            this.toolStripButtonCopy.Click += new System.EventHandler(this.toolStripButtonCopy_Click);
+            // 
+            // toolStripButtonPasteItem
+            // 
+            this.toolStripButtonPasteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonPasteItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Paste_16x;
+            this.toolStripButtonPasteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonPasteItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonPasteItem.Name = "toolStripButtonPasteItem";
+            this.toolStripButtonPasteItem.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonPasteItem.Text = "Paste item";
+            this.toolStripButtonPasteItem.Click += new System.EventHandler(this.toolStripButtonPasteItem_Click);
+            // 
+            // toolStripButtonPasteNewRows
+            // 
+            this.toolStripButtonPasteNewRows.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonPasteNewRows.Image = global::ESFA.FE.StaffEntry.Properties.Resources.PasteTable_16x;
+            this.toolStripButtonPasteNewRows.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonPasteNewRows.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonPasteNewRows.Name = "toolStripButtonPasteNewRows";
+            this.toolStripButtonPasteNewRows.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonPasteNewRows.Text = "Paste as new row(s)";
+            this.toolStripButtonPasteNewRows.Click += new System.EventHandler(this.toolStripButtonPasteNewRows_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButtonDeleteRow
+            // 
+            this.toolStripButtonDeleteRow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonDeleteRow.Image = global::ESFA.FE.StaffEntry.Properties.Resources.DeleteTableRow_16x;
+            this.toolStripButtonDeleteRow.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonDeleteRow.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonDeleteRow.Name = "toolStripButtonDeleteRow";
+            this.toolStripButtonDeleteRow.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonDeleteRow.Text = "Delete selected row(s)";
+            this.toolStripButtonDeleteRow.ToolTipText = "Delete selected row(s)";
+            this.toolStripButtonDeleteRow.Click += new System.EventHandler(this.toolStripButtonDeleteRow_Click);
+            // 
+            // toolStripButtonDeleteAll
+            // 
+            this.toolStripButtonDeleteAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonDeleteAll.Image = global::ESFA.FE.StaffEntry.Properties.Resources.DeleteAllRows_16x;
+            this.toolStripButtonDeleteAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonDeleteAll.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonDeleteAll.Name = "toolStripButtonDeleteAll";
+            this.toolStripButtonDeleteAll.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonDeleteAll.Text = "toolStripButtonDeleteAll";
+            this.toolStripButtonDeleteAll.ToolTipText = "Delete all data";
+            this.toolStripButtonDeleteAll.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButtonFilterAll
+            // 
+            this.toolStripButtonFilterAll.Checked = true;
+            this.toolStripButtonFilterAll.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripButtonFilterAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonFilterAll.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Aggregate_16x;
+            this.toolStripButtonFilterAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonFilterAll.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonFilterAll.Name = "toolStripButtonFilterAll";
+            this.toolStripButtonFilterAll.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonFilterAll.Text = "Show all rows";
+            this.toolStripButtonFilterAll.Click += new System.EventHandler(this.toolStripButtonFilterAll_Click);
+            // 
+            // toolStripButtonFilterWarnings
+            // 
+            this.toolStripButtonFilterWarnings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonFilterWarnings.Image = global::ESFA.FE.StaffEntry.Properties.Resources.AggregateWarning_16x;
+            this.toolStripButtonFilterWarnings.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonFilterWarnings.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonFilterWarnings.Name = "toolStripButtonFilterWarnings";
+            this.toolStripButtonFilterWarnings.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonFilterWarnings.Text = "Show only rows with warnings";
+            this.toolStripButtonFilterWarnings.Click += new System.EventHandler(this.toolStripButtonFilterWarnings_Click);
+            // 
+            // toolStripButtonFilterErrors
+            // 
+            this.toolStripButtonFilterErrors.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonFilterErrors.Image = global::ESFA.FE.StaffEntry.Properties.Resources.AggregateError_16x;
+            this.toolStripButtonFilterErrors.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonFilterErrors.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonFilterErrors.Name = "toolStripButtonFilterErrors";
+            this.toolStripButtonFilterErrors.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonFilterErrors.Text = "Show only rows with errors";
+            this.toolStripButtonFilterErrors.Click += new System.EventHandler(this.toolStripButtonFilterErrors_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButtonFreezeColumns
+            // 
+            this.toolStripButtonFreezeColumns.CheckOnClick = true;
+            this.toolStripButtonFreezeColumns.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonFreezeColumns.Image = global::ESFA.FE.StaffEntry.Properties.Resources.TableColumn_16x;
+            this.toolStripButtonFreezeColumns.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonFreezeColumns.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonFreezeColumns.Name = "toolStripButtonFreezeColumns";
+            this.toolStripButtonFreezeColumns.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonFreezeColumns.Text = "Freeze first and last name columns";
+            this.toolStripButtonFreezeColumns.CheckedChanged += new System.EventHandler(this.toolStripButtonFreezeColumns_CheckedChanged);
+            // 
+            // ApplicationVersion
+            // 
+            this.ApplicationVersion.AccessibleDescription = "Version number information for the application";
+            this.ApplicationVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ApplicationVersion.Location = new System.Drawing.Point(817, 28);
+            this.ApplicationVersion.Name = "ApplicationVersion";
+            this.ApplicationVersion.Size = new System.Drawing.Size(351, 13);
+            this.ApplicationVersion.TabIndex = 4;
+            this.ApplicationVersion.Text = "<<version>>";
+            this.ApplicationVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // collectionYear
+            // 
+            this.collectionYear.Location = new System.Drawing.Point(246, 15);
+            this.collectionYear.MaxLength = 4;
+            this.collectionYear.Name = "collectionYear";
+            this.collectionYear.Size = new System.Drawing.Size(100, 20);
+            this.collectionYear.TabIndex = 3;
+            this.collectionYear.Visible = false;
+            this.collectionYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IsNumeric_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(203, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Year";
+            this.label2.Visible = false;
+            // 
+            // ukprn
+            // 
+            this.ukprn.Location = new System.Drawing.Point(55, 15);
+            this.ukprn.Name = "ukprn";
+            this.ukprn.Size = new System.Drawing.Size(100, 20);
+            this.ukprn.TabIndex = 1;
+            this.ukprn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IsNumeric_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ukprn";
+            // 
+            // mainMenu
+            // 
+            this.mainMenu.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.dataToolStripMenuItem,
+            this.viewToolStripMenuItem});
+            this.mainMenu.Location = new System.Drawing.Point(0, 0);
+            this.mainMenu.Name = "mainMenu";
+            this.mainMenu.Size = new System.Drawing.Size(1180, 24);
+            this.mainMenu.TabIndex = 2;
+            this.mainMenu.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openWorkforceDataToolStripMenuItem,
+            this.saveWorkforceDataToolStripMenuItem,
+            this.exportForUploadToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // openWorkforceDataToolStripMenuItem
+            // 
+            this.openWorkforceDataToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.OpenFile_16x;
+            this.openWorkforceDataToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.openWorkforceDataToolStripMenuItem.Name = "openWorkforceDataToolStripMenuItem";
+            this.openWorkforceDataToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.openWorkforceDataToolStripMenuItem.Text = "&Open Workforce data";
+            this.openWorkforceDataToolStripMenuItem.Click += new System.EventHandler(this.openWorkforceDataToolStripMenuItem_Click);
+            // 
+            // saveWorkforceDataToolStripMenuItem
+            // 
+            this.saveWorkforceDataToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Save_16x;
+            this.saveWorkforceDataToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.saveWorkforceDataToolStripMenuItem.Name = "saveWorkforceDataToolStripMenuItem";
+            this.saveWorkforceDataToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.saveWorkforceDataToolStripMenuItem.Text = "&Save Workforce data";
+            this.saveWorkforceDataToolStripMenuItem.Click += new System.EventHandler(this.saveWorkforceDataToolStripMenuItem_Click);
+            // 
+            // exportForUploadToolStripMenuItem
+            // 
+            this.exportForUploadToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.CloudUpload_16x;
+            this.exportForUploadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.exportForUploadToolStripMenuItem.Name = "exportForUploadToolStripMenuItem";
+            this.exportForUploadToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.exportForUploadToolStripMenuItem.Text = "&Export for upload";
+            this.exportForUploadToolStripMenuItem.Click += new System.EventHandler(this.exportForUploadToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(184, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Exit_16x;
+            this.exitToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyToolStripMenuItemCopy,
+            this.pasteItemToolStripMenuPasteItem,
+            this.pasteAsnewRowsToolStripMenuPasteAsNewRows});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "&Edit";
+            // 
+            // copyToolStripMenuItemCopy
+            // 
+            this.copyToolStripMenuItemCopy.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Copy_16x;
+            this.copyToolStripMenuItemCopy.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.copyToolStripMenuItemCopy.Name = "copyToolStripMenuItemCopy";
+            this.copyToolStripMenuItemCopy.Size = new System.Drawing.Size(182, 22);
+            this.copyToolStripMenuItemCopy.Text = "&Copy selected cell(s)";
+            this.copyToolStripMenuItemCopy.Click += new System.EventHandler(this.copyToolStripMenuItemCopy_Click);
+            // 
+            // pasteItemToolStripMenuPasteItem
+            // 
+            this.pasteItemToolStripMenuPasteItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Paste_16x;
+            this.pasteItemToolStripMenuPasteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.pasteItemToolStripMenuPasteItem.Name = "pasteItemToolStripMenuPasteItem";
+            this.pasteItemToolStripMenuPasteItem.Size = new System.Drawing.Size(182, 22);
+            this.pasteItemToolStripMenuPasteItem.Text = "Paste &item(s)";
+            this.pasteItemToolStripMenuPasteItem.Click += new System.EventHandler(this.pasteItemToolStripMenuPasteItem_Click);
+            // 
+            // pasteAsnewRowsToolStripMenuPasteAsNewRows
+            // 
+            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Image = global::ESFA.FE.StaffEntry.Properties.Resources.PasteTable_16x;
+            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Name = "pasteAsnewRowsToolStripMenuPasteAsNewRows";
+            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Size = new System.Drawing.Size(182, 22);
+            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Text = "Paste as &new row(s)";
+            this.pasteAsnewRowsToolStripMenuPasteAsNewRows.Click += new System.EventHandler(this.pasteAsnewRowsToolStripMenuPasteAsNewRows_Click);
+            // 
+            // dataToolStripMenuItem
+            // 
+            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteSelectedRowsToolStripMenuItem,
+            this.deleteAllDataToolStripMenuItem});
+            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.dataToolStripMenuItem.Text = "&Data";
+            // 
+            // deleteSelectedRowsToolStripMenuItem
+            // 
+            this.deleteSelectedRowsToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.DeleteTableRow_16x;
+            this.deleteSelectedRowsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteSelectedRowsToolStripMenuItem.Name = "deleteSelectedRowsToolStripMenuItem";
+            this.deleteSelectedRowsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.deleteSelectedRowsToolStripMenuItem.Text = "Delete &selected row(s)";
+            this.deleteSelectedRowsToolStripMenuItem.Click += new System.EventHandler(this.deleteSelectedRowsToolStripMenuItem_Click);
+            // 
+            // deleteAllDataToolStripMenuItem
+            // 
+            this.deleteAllDataToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.DeleteAllRows_16x;
+            this.deleteAllDataToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteAllDataToolStripMenuItem.Name = "deleteAllDataToolStripMenuItem";
+            this.deleteAllDataToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.deleteAllDataToolStripMenuItem.Text = "Delete &all data";
+            this.deleteAllDataToolStripMenuItem.Click += new System.EventHandler(this.deleteAllDataToolStripMenuItem_Click);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemFilterAll,
+            this.toolStripMenuItemFilterWarnings,
+            this.toolStripMenuItemFilterErrors,
+            this.toolStripSeparator4,
+            this.freezeFirstAndLastNameColumnsToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "&View";
+            // 
+            // toolStripMenuItemFilterAll
+            // 
+            this.toolStripMenuItemFilterAll.Image = global::ESFA.FE.StaffEntry.Properties.Resources.Aggregate_16x;
+            this.toolStripMenuItemFilterAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItemFilterAll.Name = "toolStripMenuItemFilterAll";
+            this.toolStripMenuItemFilterAll.Size = new System.Drawing.Size(256, 22);
+            this.toolStripMenuItemFilterAll.Text = "Show &all rows";
+            this.toolStripMenuItemFilterAll.Click += new System.EventHandler(this.toolStripMenuItemFilterAll_Click);
+            // 
+            // toolStripMenuItemFilterWarnings
+            // 
+            this.toolStripMenuItemFilterWarnings.Image = global::ESFA.FE.StaffEntry.Properties.Resources.AggregateWarning_16x;
+            this.toolStripMenuItemFilterWarnings.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItemFilterWarnings.Name = "toolStripMenuItemFilterWarnings";
+            this.toolStripMenuItemFilterWarnings.Size = new System.Drawing.Size(256, 22);
+            this.toolStripMenuItemFilterWarnings.Text = "Show only rows with &warnings";
+            this.toolStripMenuItemFilterWarnings.Click += new System.EventHandler(this.toolStripMenuItemFilterWarnings_Click);
+            // 
+            // toolStripMenuItemFilterErrors
+            // 
+            this.toolStripMenuItemFilterErrors.Image = global::ESFA.FE.StaffEntry.Properties.Resources.AggregateError_16x;
+            this.toolStripMenuItemFilterErrors.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItemFilterErrors.Name = "toolStripMenuItemFilterErrors";
+            this.toolStripMenuItemFilterErrors.Size = new System.Drawing.Size(256, 22);
+            this.toolStripMenuItemFilterErrors.Text = "Show only rows with &errors";
+            this.toolStripMenuItemFilterErrors.Click += new System.EventHandler(this.toolStripMenuItemFilterErrors_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(253, 6);
+            // 
+            // freezeFirstAndLastNameColumnsToolStripMenuItem
+            // 
+            this.freezeFirstAndLastNameColumnsToolStripMenuItem.CheckOnClick = true;
+            this.freezeFirstAndLastNameColumnsToolStripMenuItem.Image = global::ESFA.FE.StaffEntry.Properties.Resources.TableColumn_16x;
+            this.freezeFirstAndLastNameColumnsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.freezeFirstAndLastNameColumnsToolStripMenuItem.Name = "freezeFirstAndLastNameColumnsToolStripMenuItem";
+            this.freezeFirstAndLastNameColumnsToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.freezeFirstAndLastNameColumnsToolStripMenuItem.Text = "Freeze first and last name columns";
+            this.freezeFirstAndLastNameColumnsToolStripMenuItem.CheckedChanged += new System.EventHandler(this.freezeFirstAndLastNameColumnsToolStripMenuItem_CheckedChanged);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "First Name";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Last Name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewMaskedTextColumn1
+            // 
+            this.dataGridViewMaskedTextColumn1.HeaderText = "Date Of Birth";
+            this.dataGridViewMaskedTextColumn1.Mask = "00/00/0000";
+            this.dataGridViewMaskedTextColumn1.MinimumWidth = 10;
+            this.dataGridViewMaskedTextColumn1.Name = "dataGridViewMaskedTextColumn1";
+            this.dataGridViewMaskedTextColumn1.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "FTE";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Campus ID";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 200;
+            // 
+            // dataGridViewMaskedTextColumn2
+            // 
+            this.dataGridViewMaskedTextColumn2.HeaderText = "Annual Salary";
+            this.dataGridViewMaskedTextColumn2.Mask = "$999999";
+            this.dataGridViewMaskedTextColumn2.MinimumWidth = 10;
+            this.dataGridViewMaskedTextColumn2.Name = "dataGridViewMaskedTextColumn2";
+            this.dataGridViewMaskedTextColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMaskedTextColumn2.Width = 200;
+            // 
+            // dataGridViewMaskedTextColumn3
+            // 
+            this.dataGridViewMaskedTextColumn3.HeaderText = "Hourly Rate";
+            this.dataGridViewMaskedTextColumn3.Mask = "$9999.00";
+            this.dataGridViewMaskedTextColumn3.MinimumWidth = 10;
+            this.dataGridViewMaskedTextColumn3.Name = "dataGridViewMaskedTextColumn3";
+            this.dataGridViewMaskedTextColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMaskedTextColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Week Contracted Hours";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 10;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 200;
+            // 
+            // dataGridViewMaskedTextColumn4
+            // 
+            this.dataGridViewMaskedTextColumn4.HeaderText = "Employment Start Date";
+            this.dataGridViewMaskedTextColumn4.Mask = "00/00/0000";
+            this.dataGridViewMaskedTextColumn4.MinimumWidth = 10;
+            this.dataGridViewMaskedTextColumn4.Name = "dataGridViewMaskedTextColumn4";
+            this.dataGridViewMaskedTextColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMaskedTextColumn4.Width = 200;
+            // 
+            // dataGridViewMaskedTextColumn5
+            // 
+            this.dataGridViewMaskedTextColumn5.HeaderText = "Employment End Date";
+            this.dataGridViewMaskedTextColumn5.Mask = "00/00/0000";
+            this.dataGridViewMaskedTextColumn5.MinimumWidth = 10;
+            this.dataGridViewMaskedTextColumn5.Name = "dataGridViewMaskedTextColumn5";
+            this.dataGridViewMaskedTextColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMaskedTextColumn5.Width = 200;
+            // 
             // GridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1132,7 +1302,7 @@ namespace ESFA.FE.StaffEntry
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenu;
             this.Name = "GridView";
-            this.Text = "Further Education Workforce";
+            this.Text = "FE staff data desktop application";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
@@ -1269,6 +1439,22 @@ namespace ESFA.FE.StaffEntry
         private DataGridViewComboBoxColumn MessageStaffData_CurrentPositionDuration;
         private DataGridViewComboBoxColumn MessageStaffData_FurtherEducationDuration;
         private DataGridViewComboBoxColumn MessageStaffData_ReasonForLeaving;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton toolStripButtonFilterAll;
+        private ToolStripButton toolStripButtonFilterWarnings;
+        private ToolStripButton toolStripButtonFilterErrors;
+        private ToolStripMenuItem viewToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItemFilterAll;
+        private ToolStripMenuItem toolStripMenuItemFilterWarnings;
+        private ToolStripMenuItem toolStripMenuItemFilterErrors;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripMenuItem freezeFirstAndLastNameColumnsToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripButton toolStripButtonFreezeColumns;
+        private ToolStripMenuItem showErrorsWarningsToolStripMenuItem;
+        private ToolStripMenuItem pasteItemToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator6;
+        private ToolStripSeparator toolStripSeparator7;
     }
 }
 

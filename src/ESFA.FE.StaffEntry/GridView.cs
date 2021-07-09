@@ -30,37 +30,46 @@ namespace ESFA.FE.StaffEntry
 
         private readonly IValidationMessagesProvider _validationMessagesProvider;
 
-        private DataGridViewRow _clonedRow;
-
         private volatile bool _canValidateCells = true;
 
         private readonly string[] _skippableStrings = { string.Empty, "N/A" };
 
+        private readonly string[] _trueValues = { "TRUE", "YES", "1" };
+
         private HashSet<string> _numericColumnNames = new HashSet<string>()
         {
-            "MessageStaffDataMainContract_WeekContractedHours",
             "MessageStaffDataMainContract_AnnualSalary",
         };
 
         private HashSet<string> _decimalColumnNames = new HashSet<string>()
         {
+            "MessageStaffDataMainContract_WeekContractedHours",
             "MessageStaffData_FTE",
             "MessageStaffDataMainContract_HourlyRate"
         };
 
         private CancellationTokenSource cancellationTokenSource;
 
+        private IEnumerable<DataGridViewRow> _hiddenRows;
+
         public GridView(
             IStaffValidationService staffValidationService,
             ColumnToModelMapper mapper,
-            IValidationMessagesProvider validationMessagesProvider)
+            IValidationMessagesProvider validationMessagesProvider,
+            ReleaseDetails releaseDetails)
         {
             _staffValidationService = staffValidationService;
             InitializeComponent();
             _mapper = mapper;
             _validationMessagesProvider = validationMessagesProvider;
             PopulateComboColumnsBasedOnControlValueLists();
-            ApplicationVersion.Text = $"Application Version: {Assembly.GetEntryAssembly().GetName().Version}";
+            ApplicationVersion.Text = $"Application Version: {Assembly.GetEntryAssembly().GetName().Version} {releaseDetails.Configuration.ReleaseDate}";
+        }
+
+        private enum FilterMode
+        {
+            Warnings,
+            Errors
         }
 
         private void PopulateComboColumnsBasedOnControlValueLists()
@@ -165,7 +174,7 @@ namespace ESFA.FE.StaffEntry
                     continue;
                 }
 
-                var data = CreateStaffObjectFromGrid(row);
+                MessageStaffData data = CreateStaffObjectFromGrid(row);
 
                 if (!string.IsNullOrEmpty(data.FirstName) || !string.IsNullOrEmpty(data.LastName))
                 {
@@ -299,7 +308,7 @@ namespace ESFA.FE.StaffEntry
                 {
                     DateTime = DateTime.Now,
                     ProtectiveMarking = MessageHeaderSourceProtectiveMarking.OFFICIALSENSITIVEPersonal,
-                    Release = "0.0.1",
+                    Release = $"{Assembly.GetEntryAssembly().GetName().Version}",
                     SerialNo = "1",
                     SoftwarePackage = "ESFA FEW Data entry",
                     SoftwareSupplier = "ESFA",
@@ -393,27 +402,11 @@ namespace ESFA.FE.StaffEntry
             {
                 if (_decimalColumnNames.Contains(grid.CurrentCell.OwningColumn.Name)) //Desired Column
                 {
-                    var value = CleanseInputNumber(grid.CurrentCell.Value?.ToString());
-                    if (!decimal.TryParse(value, out var decimalValue))
-                    {
-                        grid.CurrentCell.Value = null;
-                    }
-                    else
-                    {
-                        grid.CurrentCell.Value = Math.Round(decimalValue, 2);
-                    }
+                    grid.CurrentCell.Value = GetDecimalValue(grid.CurrentCell.Value?.ToString());
                 }
                 else if (_numericColumnNames.Contains(grid.CurrentCell.OwningColumn.Name)) //Desired Column
                 {
-                    var value = CleanseInputNumber(grid.CurrentCell.Value?.ToString());
-                    if (!int.TryParse(value, out var intValue))
-                    {
-                        grid.CurrentCell.Value = null;
-                    }
-                    else
-                    {
-                        grid.CurrentCell.Value = intValue;
-                    }
+                    grid.CurrentCell.Value = GetIntValue(grid.CurrentCell.Value?.ToString());
                 }
             }
 
@@ -427,6 +420,32 @@ namespace ESFA.FE.StaffEntry
 
             Thread validationThread = new Thread(IsValidRow);
             validationThread.Start(cancellationTokenSource.Token);
+        }
+
+        private decimal? GetDecimalValue(string input)
+        {
+            var value = CleanseInputNumber(input);
+            if (!decimal.TryParse(value, out var decimalValue))
+            {
+                return null;
+            }
+            else
+            {
+                return Math.Round(decimalValue, 2);
+            }
+        }
+
+        private int? GetIntValue(string input)
+        {
+            var value = CleanseInputNumber(input);
+            if (!int.TryParse(value, out var intValue))
+            {
+                return null;
+            }
+            else
+            {
+                return intValue;
+            }
         }
 
         private string CleanseInputNumber(string value)
@@ -557,7 +576,7 @@ namespace ESFA.FE.StaffEntry
                     break;
                 case "uniquestaffmember":
                     result.Add("FirstName");
-                    result.Add("LastNameName");
+                    result.Add("LastName");
                     result.Add("DateofBirth");
                     break;
                 case "teacherdata":
@@ -683,14 +702,8 @@ namespace ESFA.FE.StaffEntry
                         else if (oCell.OwningColumn.GetType() == typeof(DataGridViewCheckBoxColumn))
                         {
                             DataGridViewCheckBoxCell checkCell = oCell as DataGridViewCheckBoxCell;
-                            if (!Enum.TryParse<BooleanAliases>(sCells[i], true, out _))
-                            {
-                                continue;
-                            }
-
-                            var convertedValue = Convert.ChangeType(
-                                Enum.Parse(typeof(BooleanAliases), sCells[i]), oCell.ValueType);
-
+                            bool chkd = _trueValues.Contains(sCells[i], StringComparer.OrdinalIgnoreCase);
+                            var convertedValue = Convert.ChangeType(chkd, oCell.ValueType);
                             checkCell.Value = convertedValue;
                         }
                     }
@@ -698,7 +711,7 @@ namespace ESFA.FE.StaffEntry
             }
             catch (FormatException)
             {
-                MessageBox.Show("The data you pasted is in the wrong format for the cell");
+                MessageBox.Show("The data you pasted is in the wrong format for the cell(s)");
             }
             finally
             {
@@ -804,6 +817,21 @@ namespace ESFA.FE.StaffEntry
 
         private void Export()
         {
+            foreach (DataGridViewRow row in grid.Rows)
+            {
+                if (row.IsNewRow)
+                {
+                    continue;
+                }
+
+                string[] messages = row.ErrorText.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                if (messages.Any(x => x.StartsWith("Error", StringComparison.OrdinalIgnoreCase)))
+                {
+                    MessageBox.Show("You cannot export until all errors are fixed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
             SaveData($"FEW-{ukprn.Text}-2021-{DateTime.Now:yyyyMMdd-HHmmss}-01.XML");
         }
 
@@ -865,19 +893,6 @@ namespace ESFA.FE.StaffEntry
         {
             try
             {
-                _clonedRow = grid.SelectedRows.Cast<DataGridViewRow>()
-                    .OrderBy(r => r.Index)
-                    .Select(r =>
-                    {
-                        var clone = r.Clone() as DataGridViewRow;
-                        for (int i = 0; i < r.Cells.Count; i++)
-                        {
-                            clone.Cells[i].Value = r.Cells[i].Value;
-                        }
-
-                        return clone;
-                    }).FirstOrDefault();
-
                 var allSelectedRows = grid.SelectedRows.Cast<DataGridViewRow>()
                     .OrderBy(r => r.Index)
                     .Select(r =>
@@ -927,6 +942,7 @@ namespace ESFA.FE.StaffEntry
                     return;
                 }
 
+                clipText = clipText.Replace("\tTrue", "\tYES").Replace("\tFalse", "\tNO");
                 Clipboard.SetText(clipText);
             }
             catch (Exception)
@@ -939,14 +955,7 @@ namespace ESFA.FE.StaffEntry
         {
             try
             {
-                if (_clonedRow == null)
-                {
-                    PasteFromClipBoard();
-                    return;
-                }
-
-                grid.Rows.Insert(grid.CurrentCell.RowIndex, _clonedRow);
-                _clonedRow = null;
+                PasteFromClipBoard();
             }
             catch (Exception)
             {
@@ -956,16 +965,180 @@ namespace ESFA.FE.StaffEntry
 
         private void PasteSimple()
         {
+            StringBuilder sb = new StringBuilder();
+            bool wasError = false;
+            bool moreInClipboard = false;
+            bool moreSelected = false;
+
+            if (grid.SelectedCells.Count == 0 || string.IsNullOrEmpty(Clipboard.GetText()))
+            {
+                return;
+            }
+            else if (grid.SelectedCells.Count == 1)
+            {
+                PasteCell(sb, ref wasError, Clipboard.GetText(), grid.SelectedCells[0]);
+            }
+            else
+            {
+                List<string[]> block = Clipboard.GetText().Split(new string[] { Environment.NewLine }, StringSplitOptions.None).Select(x => x.Split('\t')).ToList();
+                if (!block.Any())
+                {
+                    return;
+                }
+
+                string[] last = block.Last();
+                if (last.Length == 1 && string.IsNullOrEmpty(last[0]))
+                {
+                    block.Remove(last);
+                }
+
+                List<DataGridViewCell> selection = grid.SelectedCells.Cast<DataGridViewCell>().OrderBy(x => x.RowIndex).ThenBy(x => x.ColumnIndex).ToList();
+
+                int rowClip = 0;
+                int colClip = 0;
+                int rowGrid = selection[0].RowIndex;
+
+                foreach (DataGridViewCell gridSelectedCell in selection)
+                {
+                    if (gridSelectedCell.RowIndex != rowGrid)
+                    {
+                        if (rowClip < block.Count && block[rowClip].Length > colClip)
+                        {
+                            moreInClipboard = true;
+                        }
+
+                        colClip = 0;
+                        rowClip++;
+                        rowGrid = gridSelectedCell.RowIndex;
+                    }
+
+                    if (rowClip >= block.Count || colClip >= block[rowClip].Length)
+                    {
+                        moreSelected = true;
+                        continue;
+                    }
+
+                    PasteCell(sb, ref wasError, block[rowClip][colClip], gridSelectedCell);
+
+                    colClip++;
+                }
+
+                if (rowClip < block.Count)
+                {
+                    moreInClipboard = true;
+                }
+            }
+
+            if (wasError)
+            {
+                string additional = sb.Length > 0 ? $" because:{Environment.NewLine}{sb}" : string.Empty;
+                MessageBox.Show($"Some items failed to paste${additional}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (moreInClipboard || moreSelected)
+            {
+                if (moreInClipboard && !moreSelected)
+                {
+                    MessageBox.Show($"There is more in the clipboard than selected cells, some of the clipboard was ignored", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (moreSelected && !moreInClipboard)
+                {
+                    MessageBox.Show($"The selected cell area is more than the clipboard content, some cells have been left with their original values", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show($"The select cell area does not match the clipboard contents, as much data as possible was pasted, some cells have been left with their original values", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PasteCell(StringBuilder sb, ref bool wasError, string value, DataGridViewCell gridSelectedCell)
+        {
             try
             {
-                foreach (DataGridViewCell gridSelectedCell in grid.SelectedCells)
-                {
-                    gridSelectedCell.Value = Clipboard.GetText();
-                }
+                PasteCell(gridSelectedCell, value);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                sb.AppendLine(ex.ParamName);
+                wasError = true;
             }
             catch (Exception)
             {
-                MessageBox.Show("Failed to paste", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                wasError = true;
+            }
+        }
+
+        private void PasteCell(DataGridViewCell gridSelectedCell, string value)
+        {
+            Type ct = gridSelectedCell.GetType();
+            if (ct == typeof(DataGridViewTextBoxCell))
+            {
+                DataGridViewTextBoxCell textCell = (DataGridViewTextBoxCell)gridSelectedCell;
+
+                if (_numericColumnNames.Contains(gridSelectedCell.OwningColumn.Name))
+                {
+                    int? valueInt = GetIntValue(value);
+                    if (valueInt == null)
+                    {
+                        throw new ArgumentOutOfRangeException("value was not a valid number or was too large");
+                    }
+
+                    if (valueInt.Value.ToString().Length > textCell.MaxInputLength)
+                    {
+                        throw new ArgumentOutOfRangeException("number value is too large");
+                    }
+
+                    gridSelectedCell.Value = valueInt.Value;
+                }
+                else if (_decimalColumnNames.Contains(gridSelectedCell.OwningColumn.Name))
+                {
+                    decimal? valueDecimal = GetDecimalValue(value);
+                    if (valueDecimal == null)
+                    {
+                        throw new ArgumentOutOfRangeException("value was not a valid decimal");
+                    }
+
+                    if (valueDecimal.Value.ToString().Length > textCell.MaxInputLength)
+                    {
+                        throw new ArgumentOutOfRangeException("decimal value is too large");
+                    }
+
+                    gridSelectedCell.Value = valueDecimal.Value;
+                }
+                else
+                {
+                    if (value.Length > textCell.MaxInputLength)
+                    {
+                        throw new ArgumentOutOfRangeException("text value is too long");
+                    }
+
+                    gridSelectedCell.Value = value;
+                }
+            }
+            else if (ct == typeof(DataGridViewMaskedTextCell))
+            {
+                if (!DateTime.TryParse(value, out DateTime result))
+                {
+                    throw new ArgumentOutOfRangeException("value was not a valid date");
+                }
+
+                gridSelectedCell.Value = result.ToString("dd/MM/yyyy");
+            }
+            else if (ct == typeof(DataGridViewComboBoxCell))
+            {
+                DataGridViewComboBoxCell comboCell = (DataGridViewComboBoxCell)gridSelectedCell;
+                ComboBoxItem comboItem = comboCell.Items.Cast<ComboBoxItem>().SingleOrDefault(x => string.Equals(x.Code.ToString(), value, StringComparison.OrdinalIgnoreCase) || string.Equals(x.DisplayValue, value, StringComparison.OrdinalIgnoreCase));
+                if (comboItem == null)
+                {
+                    throw new ArgumentOutOfRangeException("value was not a valid name or code");
+                }
+
+                comboCell.Value = comboItem;
+            }
+            else if (ct == typeof(DataGridViewCheckBoxCell))
+            {
+                gridSelectedCell.Value = _trueValues.Any(x => string.Equals(x, value, StringComparison.OrdinalIgnoreCase));
             }
         }
 
@@ -997,6 +1170,185 @@ namespace ESFA.FE.StaffEntry
             {
                 grid.ResumeLayout();
             }
+        }
+
+        private void toolStripButtonFilterAll_Click(object sender, EventArgs e)
+        {
+            SetFilterNone();
+        }
+
+        private void toolStripButtonFilterWarnings_Click(object sender, EventArgs e)
+        {
+            SetFilterWarnings();
+        }
+
+        private void toolStripButtonFilterErrors_Click(object sender, EventArgs e)
+        {
+            SetFilterErrors();
+        }
+
+        private void toolStripMenuItemFilterAll_Click(object sender, EventArgs e)
+        {
+            SetFilterNone();
+        }
+
+        private void toolStripMenuItemFilterWarnings_Click(object sender, EventArgs e)
+        {
+            SetFilterWarnings();
+        }
+
+        private void toolStripMenuItemFilterErrors_Click(object sender, EventArgs e)
+        {
+            SetFilterErrors();
+        }
+
+        private void ClearFilterButtons()
+        {
+            toolStripButtonFilterAll.Checked = false;
+            toolStripMenuItemFilterAll.Checked = false;
+            toolStripButtonFilterWarnings.Checked = false;
+            toolStripButtonFilterErrors.Checked = false;
+            toolStripMenuItemFilterWarnings.Checked = false;
+            toolStripMenuItemFilterErrors.Checked = false;
+        }
+
+        private void SetFilterNone()
+        {
+            ClearFilterButtons();
+            toolStripButtonFilterAll.Checked = true;
+            toolStripMenuItemFilterAll.Checked = true;
+            grid.SuspendLayout();
+            RestoreGrid();
+            grid.ResumeLayout();
+        }
+
+        private void SetFilterWarnings()
+        {
+            ClearFilterButtons();
+            toolStripButtonFilterWarnings.Checked = true;
+            toolStripMenuItemFilterWarnings.Checked = true;
+            grid.SuspendLayout();
+            RestoreGrid();
+            ClearGrid(FilterMode.Warnings);
+            grid.ResumeLayout();
+        }
+
+        private void SetFilterErrors()
+        {
+            ClearFilterButtons();
+            toolStripButtonFilterErrors.Checked = true;
+            toolStripMenuItemFilterErrors.Checked = true;
+            grid.SuspendLayout();
+            RestoreGrid();
+            ClearGrid(FilterMode.Errors);
+            grid.ResumeLayout();
+        }
+
+        private void ClearGrid(FilterMode mode)
+        {
+            List<DataGridViewRow> hiddenRows = new List<DataGridViewRow>();
+            Stack<int> indexes = new Stack<int>();
+            foreach (DataGridViewRow row in grid.Rows)
+            {
+                if (row.IsNewRow)
+                {
+                    continue;
+                }
+
+                if (mode == FilterMode.Warnings) {
+                    if (row.Cells.Cast<DataGridViewCell>().Any(x => x.ErrorText.StartsWith("Warning")))
+                    {
+                        continue;
+                    }
+                }
+                else if (mode == FilterMode.Errors)
+                {
+                    if (row.Cells.Cast<DataGridViewCell>().Any(x => x.ErrorText.StartsWith("Error")))
+                    {
+                        continue;
+                    }
+                }
+
+                hiddenRows.Add(row);
+                indexes.Push(row.Index);
+            }
+
+            while (indexes.Any())
+            {
+                grid.Rows.RemoveAt(indexes.Pop());
+            }
+
+            _hiddenRows = hiddenRows;
+        }
+
+        private void RestoreGrid()
+        {
+            if (_hiddenRows == null)
+            {
+                return;
+            }
+
+            foreach (DataGridViewRow row in _hiddenRows)
+            {
+                grid.Rows.Add(row);
+            }
+
+            _hiddenRows = null;
+        }
+
+        private void freezeFirstAndLastNameColumnsToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            bool chkd = ((ToolStripMenuItem)sender).Checked;
+            FreezeColumns(chkd);
+            toolStripButtonFreezeColumns.Checked = chkd;
+        }
+
+        private void toolStripButtonFreezeColumns_CheckedChanged(object sender, EventArgs e)
+        {
+            bool chkd = ((ToolStripButton)sender).Checked;
+            FreezeColumns(chkd);
+            freezeFirstAndLastNameColumnsToolStripMenuItem.Checked = chkd;
+        }
+
+        private void FreezeColumns(bool frozen)
+        {
+            grid.Columns[0].Frozen = frozen;
+            grid.Columns[1].Frozen = frozen;
+        }
+
+        private void showErrorsWarningsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            bool found = false;
+            foreach (var row in grid.SelectedRows.Cast<DataGridViewRow>())
+            {
+                if (!string.IsNullOrEmpty(row.ErrorText))
+                {
+                    sb.AppendLine(row.ErrorText);
+                    found = true;
+                }
+            }
+
+            if (found)
+            {
+                string clipboardText = sb.ToString();
+                sb.AppendLine();
+                sb.Append("Would you like to copy the above to the clipboard?");
+
+                if (MessageBox.Show(sb.ToString(), "Errors/Warnings", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
+                    Clipboard.SetText(clipboardText);
+                }
+            }
+            else
+            {
+                MessageBox.Show("The selected rows don't have any errors/warnings!", "Nothing to show", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void pasteItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PasteSimple();
         }
     }
 }

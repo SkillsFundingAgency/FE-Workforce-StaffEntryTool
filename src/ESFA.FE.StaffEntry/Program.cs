@@ -9,6 +9,7 @@ using ESFA.DC.FEW.FileProcessingService.Rules.Role;
 using ESFA.DC.FEW.FileProcessingService.Rules.Staff;
 using ESFA.DC.FEW.FileProcessingService.Rules.Teacher;
 using ESFA.DC.FEW.FileProcessingService.Service.ReferenceData.Interface;
+using ESFA.FE.StaffEntry.Models;
 using ESFA.FE.StaffEntry.Service;
 using ESFA.FEW.StaffEntry.Validation;
 using ESFA.FEW.StaffEntry.Validation.Interfaces;
@@ -35,7 +36,8 @@ namespace ESFA.FE.StaffEntry
             Application.Run(new GridView(
                 (IStaffValidationService)ServiceProvider.GetService(typeof(IStaffValidationService)),
                 (ColumnToModelMapper)ServiceProvider.GetService(typeof(ColumnToModelMapper)),
-                (IValidationMessagesProvider)ServiceProvider.GetService(typeof(IValidationMessagesProvider))));
+                (IValidationMessagesProvider)ServiceProvider.GetService(typeof(IValidationMessagesProvider)),
+                (ReleaseDetails)ServiceProvider.GetService(typeof(ReleaseDetails))));
         }
 
         private static void ConfigureServices()
@@ -53,6 +55,8 @@ namespace ESFA.FE.StaffEntry
             services.AddSingleton<IReferenceDataCache, ReferenceDataCache>();
             services.AddSingleton<IReferenceDataKeys, ReferenceDataKeys>();
             services.AddSingleton<ICampusIdReferenceDataCache, CampusIdReferenceDataCache>();
+
+            services.AddSingleton<ReleaseDetails>();
             ServiceProvider = services.BuildServiceProvider();
         }
 
